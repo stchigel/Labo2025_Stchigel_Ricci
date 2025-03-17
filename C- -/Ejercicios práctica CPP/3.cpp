@@ -22,14 +22,19 @@ void novoPedido(vector<Pedido>&euQueroComida){
     for(int i=0; i<novosPedidos; i++){
         Pedido novoPedido;
         int cantComidas=0;
+        cout<<"Entrar nome do cliente"<<endl;
         cin>>novoPedido.nombrec;
+        cout<<"Entrar num do pedidinho"<<endl;
         cin>>novoPedido.num;
         cout<<"Quantas refeições você quer entrar?"<<endl;
         cin>>cantComidas;
         for(int j=0; j<cantComidas; j++){
             Producto novoProducto;
+            cout<<"Entrar nome do refeições"<<endl;
             cin>>novoProducto.nombre;
+            cout<<"cantidinha"<<endl;
             cin>>novoProducto.cant;
+            cout<<"preço"<<endl;
             cin>>novoProducto.precio;
             novoPedido.prods.push_back(novoProducto);
         }
@@ -77,7 +82,41 @@ void totalDia(vector<Pedido>&euQueroComida){
 // Eu sou Masivo Bro
 
 int main(){
+    /*
+    Correccion: para los productaso convene un vecor con los priducto y hal hcaer el pedido solo poner el id
+    en struct pedido poer total
+     */
     vector<Pedido>euQueroComida;
+    int resp = 0;
+
+    while (resp != 5) {
+        cout << "1- Ingresar pedidinho" << endl << "2- Ver pedidinhos" << endl << "3- Cancelar pedidinhos" << endl << "4- Total do dia" << endl << "5- Sair" << endl;
+        cin >> resp;
+        switch (resp) {
+            case 1:
+                novoPedido(euQueroComida);
+                break;
+    
+            case 2:
+                verPedidinhos(euQueroComida);
+                break;
+
+            case 3:
+                cancelarPedidinho(euQueroComida);
+                break;
+            
+            case 4:
+                totalDia(euQueroComida);
+                break;
+    
+            case 5:
+                cout << "Saindo do programa..." << endl;
+                break;
+    
+            default:
+                cout << "Opção não válida, intenção de novo" << endl;
+        }
+    }
 }
 //masicvo bro masivo bro maisvo bro mmas
 //enorme mano

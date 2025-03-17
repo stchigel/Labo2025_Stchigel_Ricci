@@ -5,13 +5,21 @@ using namespace std;
 
 //corregido
 
+struct fechinia{
+    int dia=0;
+    int mes=0;
+    int anio=0;
+};
+
 struct Empleado{
     string nombre;
     string apellido;
-    string fecha;
+    fechinia fecha;
     string sexo;
     float salario = 0;
 };
+
+
 
 void ingresarEmpleados(vector<Empleado>& empleados){
     int resp;
@@ -28,7 +36,9 @@ void ingresarEmpleados(vector<Empleado>& empleados){
         cout << "Apellido del empleado: ";
         cin >> empNuevo.apellido;
         cout << "Fecha de nacimiento (AAAA/MM/DD): ";
-        cin >> empNuevo.fecha;
+        cin >> empNuevo.fecha.dia;
+        cin >> empNuevo.fecha.mes;
+        cin >> empNuevo.fecha.anio;
         cout << "Sexo del empleado (M/F): ";
         cin >> empNuevo.sexo;
         while (empNuevo.sexo != "M" && empNuevo.sexo != "F") {

@@ -11,6 +11,10 @@ struct Producto{
     bool vencimiento;
 };
 
+// x|   |o   
+// x| x |o 
+// x| o |o 
+
 int main(){
     Producto pasillo[3][4]/* = {
         { {"Leche", "La Serenísima", 1001, 120.5, true}, {"Pan", "Bimbo", 1002, 250.0, true}, {"Arroz", "Gallo", 1003, 180.0, false}, {"Fideos", "Matarazzo", 1004, 200.0, false} },
@@ -64,4 +68,10 @@ int main(){
     cout<<cantv<<endl;
 }
 
+//masivo bro
+//masivo bro
+//masivo bro
+//masivo bro
+//masivo bro
+//masivo bro
 //masivo bro
