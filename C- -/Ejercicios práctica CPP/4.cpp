@@ -43,9 +43,13 @@ void cancelarCita(vector<paciente>&Pacientes){
     int numPACcan=0;
     cout<<"Ingresa el numero del paciente el cual quieras cancelar su turno medico"<<endl;
     cin>>numPACcan;
-    Pacientes[numPACcan].proxcita.dia=0;
-    Pacientes[numPACcan].proxcita.mes=0;
-    Pacientes[numPACcan].proxcita.anio=0;
+    for (paciente paciente : Pacientes) {
+        if (paciente.num==numPACcan){
+        paciente.proxcita.dia=0;
+        paciente.proxcita.mes=0;
+        paciente.proxcita.anio=0;
+        }
+    }
 }
 
 void mostrarTurno(vector<paciente>&Pacientes){
