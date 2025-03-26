@@ -65,7 +65,7 @@ producto busqProd(string nombre, vector<producto> productos){
 };
 
 void ingresoProd(vector<producto>&productos){
-    productos = {
+    /*productos = {
         {"Big Mac", true, 1500, 5.99, "Hamburguesa"},
         {"Cuarto de Libra", false, 1200, 6.49, "Hamburguesa"},
         {"McNuggets 10 piezas", true, 2000, 4.99, "Pollo"},
@@ -86,8 +86,8 @@ void ingresoProd(vector<producto>&productos){
         {"Coca-Cola Mediana", false, 2200, 2.29, "Bebida"},
         {"Sprite Grande", true, 2000, 2.49, "Bebida"},
         {"Batido de Vainilla", false, 1600, 3.59, "Bebida"}
-    };
-    /*for(int i=0; i<20; i++){
+    };*/
+    for(int i=0; i<20; i++){
         producto prod;
         cout<<"Nombre del producto N°"<<i+1<<": ";
         cin>>prod.nombre;
@@ -99,7 +99,7 @@ void ingresoProd(vector<producto>&productos){
         cin>>prod.promo;
         prod.ventas=0;
         productos.push_back(prod);
-    }*/
+    }
 }
 
 void regPedido(vector<producto>&productos, vector<pedido>&pedidos){
@@ -114,12 +114,33 @@ void regPedido(vector<producto>&productos, vector<pedido>&pedidos){
     cout<<"/";
     cin>>ped.fecha.anio;
     while(nomProd!="listo"){
+        producto Prodn;
+        int Cant;
         cout<<"Nombre del producto (Si ya no quiere ingresar, ponga \"listo\"): ";
-        cin>>ped.nombre;
+        cin>>nomProd;
         if(nomProd=="listo"){
             cout<<"Listo confirmado";
         }else{
-
+            for(int i=0; i<productos.size(); i++){
+                if(productos[i].nombre==nomProd){
+                    productos[i].ventas+=1;
+                    Prodn.categoria=productos[i].categoria;
+                    Prodn.nombre=productos[i].nombre;
+                    Prodn.precio=productos[i].precio;
+                    Prodn.promo=productos[i].promo;
+                    Prodn.ventas=productos[i].ventas;
+                }
+            }
+            ped.prods.push_back(Prodn);
+            cout<<"Cantidad";
+            cin>>Cant;
+            ped.cants.push_back(Cant);
+            if(Prodn.promo){
+                ped.total+=(Prodn.precio*0.8);
+            } else {
+                ped.total+=Prodn.precio;
+            }
         }
     }
+    pedidos.push_back(ped);
 }
