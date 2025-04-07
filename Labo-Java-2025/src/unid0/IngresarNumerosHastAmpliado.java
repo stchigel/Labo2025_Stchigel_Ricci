@@ -14,9 +14,8 @@ public class IngresarNumerosHastAmpliado {
         while (numero!=-1) {
             System.out.println("Ingresa un numero");
             numero=e.nextInt();
-            if (numero != -1||numero==-1) {
-                contador = contador + 1;
-            }
+            contador = contador + 1;
+
             if(mayor<numero){
                 mayor=numero;
             }
