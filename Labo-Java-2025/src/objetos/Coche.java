@@ -1,4 +1,4 @@
-package unidad1;
+package objetos;
 
 public class Coche {
     private String marca;
@@ -13,23 +13,23 @@ public class Coche {
         this.velocidad=0;
     }
 
-    public Coche(String mc, String md, String cl, int vl){
-        this.marca=mc;
-        this.modelo=md;
-        this.color=cl;
-        this.velocidad=vl;
+    public Coche(String marca, String modelo, String color, int velocidad){
+        this.marca=marca;
+        this.modelo=modelo;
+        this.color=color;
+        this.velocidad=velocidad;
     }
 
     public String getMarca(){
-        return marca;
+        return this.marca;
     }
 
     public String getColor() {
-        return color;
+        return this.color;
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setColor(String color) {
@@ -53,7 +53,7 @@ public class Coche {
     }
 
     public int mostrarVelocidadActual(){
-        return velocidad;
+        return this.velocidad;
     }
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package unidad1;
+package objetos;
 
 public class Cafetera {
     private float cantidadMaxima;
@@ -9,26 +9,26 @@ public class Cafetera {
         this.cantidadActual=0;
     }
 
-    public Cafetera(float max){
-        this.cantidadMaxima=max;
-        this.cantidadActual=max;
+    public Cafetera(float cantidadMaxima){
+        this.cantidadMaxima=cantidadMaxima;
+        this.cantidadActual=cantidadMaxima;
     }
 
-    public Cafetera(float max, float act){
-        this.cantidadMaxima=max;
-        if(act<=max){
-            this.cantidadActual=act;
+    public Cafetera(float cantidadMaxima, float cantidadActual){
+        this.cantidadMaxima=cantidadMaxima;
+        if(cantidadActual<=cantidadMaxima){
+            this.cantidadActual=cantidadActual;
         } else {
-            this.cantidadActual=max;
+            this.cantidadActual=cantidadMaxima;
         }
     }
 
     public float getCantidadActual() {
-        return cantidadActual;
+        return this.cantidadActual;
     }
 
     public float getCantidadMaxima() {
-        return cantidadMaxima;
+        return this.cantidadMaxima;
     }
 
     public void setCantidadActual(float cantidadActual) {
@@ -40,11 +40,11 @@ public class Cafetera {
     }
 
     public void llenarCafetera(){
-        this.cantidadActual=cantidadMaxima;
+        this.cantidadActual=this.cantidadMaxima;
     }
 
     public void servirTaza(int capacidad){
-        if(cantidadActual>=capacidad){
+        if(this.cantidadActual>=capacidad){
             this.cantidadActual-=capacidad;
         } else {
             this.cantidadActual=0;
@@ -56,8 +56,8 @@ public class Cafetera {
     }
 
     public void agregarCafe(int capacidad){
-        if(cantidadActual+capacidad>cantidadMaxima){
-            this.cantidadActual=cantidadMaxima;
+        if(this.cantidadActual+capacidad>this.cantidadMaxima){
+            this.cantidadActual=this.cantidadMaxima;
         } else {
             this.cantidadActual+=capacidad;
         }

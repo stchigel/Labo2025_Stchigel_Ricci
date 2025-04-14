@@ -11,22 +11,22 @@ public class Persona {
         this.direccion="N/A";
     }
 
-    public Persona(String nm, int ed, String dr){
-        this.nombre=nm;
-        this.edad=ed;
-        this.direccion=dr;
+    public Persona(String nombre, int edad, String direccion){
+        this.nombre=nombre;
+        this.edad=edad;
+        this.direccion=direccion;
     }
 
     public int getEdad() {
-        return edad;
+        return this.edad;
     }
 
     public String getDireccion() {
-        return direccion;
+        return this.direccion;
     }
 
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setDireccion(String direccion) {
@@ -42,7 +42,7 @@ public class Persona {
     }
 
     public void imprimir(){
-        System.out.println("Nombre: "+nombre+" | Edad: "+edad+" | Dirección: "+direccion);
+        System.out.println("Nombre: "+this.nombre+" | Edad: "+this.edad+" | Dirección: "+this.direccion);
     }
 
     public static void main(String[] args) {

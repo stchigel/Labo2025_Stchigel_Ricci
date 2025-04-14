@@ -1,6 +1,4 @@
-package unidad1;
-
-import java.util.Objects;
+package tiempo;
 
 public class Fecha {
     private int dia;
@@ -13,22 +11,22 @@ public class Fecha {
         this.anio=0;
     }
 
-    public Fecha(int d, int m, int a){
-        this.dia=d;
-        this.mes=m;
-        this.anio=a;
+    public Fecha(int dia, int mes, int anio){
+        this.dia=dia;
+        this.mes=mes;
+        this.anio=anio;
     }
 
     public int getDia() {
-        return dia;
+        return this.dia;
     }
 
     public int getMes() {
-        return mes;
+        return this.mes;
     }
 
     public int getAnio() {
-        return anio;
+        return this.anio;
     }
 
     public void setDia(int dia) {
@@ -48,7 +46,7 @@ public class Fecha {
             case 1, 3, 5, 7, 8, 10, 12:
                 return 31;
             case 2:
-                if ((anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)) {
+                if ((this.anio % 4 == 0 && this.anio % 100 != 0) || (this.anio % 400 == 0)) {
                     return 29;
                 } else {
                     return 28;
@@ -61,19 +59,19 @@ public class Fecha {
     }
 
     public void valida(){
-        if(dia>diasMes(mes)) this.dia=31;
-        if(mes>12) this.mes=12;
-        if(dia<1) this.dia=1;
-        if(mes<1) this.mes=1;
-        if(anio<0) this.anio=0;
+        if(this.dia>diasMes(this.mes)) this.dia=31;
+        if(this.mes>12) this.mes=12;
+        if(this.dia<1) this.dia=1;
+        if(this.mes<1) this.mes=1;
+        if(this.anio<0) this.anio=0;
     }
 
     public void corta(){
-        System.out.println(dia+"-"+mes+"-"+anio);
+        System.out.println(this.dia+"-"+this.mes+"-"+this.anio);
     }
 
     public void larga(){
-        System.out.println("El día "+dia+" del "+mes+" de "+anio);
+        System.out.println("El día "+this.dia+" del "+this.mes+" de "+this.anio);
     }
 
     public void siguiente(){
@@ -85,7 +83,7 @@ public class Fecha {
     }
 
     public boolean igualQue (Fecha fecha){
-        if(dia==fecha.getDia() && mes==fecha.getMes() && anio==fecha.getAnio()){
+        if(this.dia==fecha.getDia() && this.mes==fecha.getMes() && this.anio==fecha.getAnio()){
             return true;
         } else {
             return false;
@@ -93,17 +91,17 @@ public class Fecha {
     }
 
     public boolean mayorQue (Fecha fecha){
-        if(anio>fecha.getAnio()){
+        if(this.anio>fecha.getAnio()){
             return true;
-        } else if (anio<fecha.getAnio()) {
+        } else if (this.anio<fecha.getAnio()) {
             return false;
-        } else if(mes>fecha.getMes()){
+        } else if(this.mes>fecha.getMes()){
             return true;
-        } else if (mes<fecha.getMes()) {
+        } else if (this.mes<fecha.getMes()) {
             return false;
-        } else if(dia>fecha.getDia()){
+        } else if(this.dia>fecha.getDia()){
             return true;
-        } else if (dia<fecha.getDia()) {
+        } else if (this.dia<fecha.getDia()) {
             return false;
         } else {
             return false;
@@ -111,17 +109,17 @@ public class Fecha {
     }
 
     public boolean menorQue (Fecha fecha){
-        if(anio>fecha.getAnio()){
+        if(this.anio>fecha.getAnio()){
             return false;
-        } else if (anio<fecha.getAnio()) {
+        } else if (this.anio<fecha.getAnio()) {
             return true;
-        } else if(mes>fecha.getMes()){
+        } else if(this.mes>fecha.getMes()){
             return false;
-        } else if (mes<fecha.getMes()) {
+        } else if (this.mes<fecha.getMes()) {
             return true;
-        } else if(dia>fecha.getDia()){
+        } else if(this.dia>fecha.getDia()){
             return false;
-        } else if (dia<fecha.getDia()) {
+        } else if (this.dia<fecha.getDia()) {
             return true;
         } else {
             return false;

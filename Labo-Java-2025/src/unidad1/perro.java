@@ -1,7 +1,7 @@
 package unidad1;
 
 public class perro {
-    private String nombre;
+    /*private String nombre;
     private String raza;
     private int edad;
     private String color;
@@ -16,5 +16,5 @@ public class perro {
         this.raza = raza;
         this.edad = edad;
         this.color = color;
-    }
+    }*/
 }

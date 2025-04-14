@@ -1,4 +1,4 @@
-package unidad1;
+package figuras_geometricas;
 
 public class Circulo {
     private double radio;
@@ -7,24 +7,24 @@ public class Circulo {
         this.radio=2;
     }
 
-    public Circulo(double rad){
-        this.radio=rad;
+    public Circulo(double radio){
+        this.radio=radio;
     }
 
     public double getRadio(){
-        return radio;
+        return this.radio;
     }
 
-    public void setRadio(double rad){
-        this.radio=rad;
+    public void setRadio(double radio){
+        this.radio=radio;
     }
 
     public double calcArea(){
-        return Math.PI * (radio*radio);
+        return Math.PI * (this.radio*this.radio);
     }
 
     public double calcPerimetro(){
-        return 2 * Math.PI * radio;
+        return 2 * Math.PI * this.radio;
     }
 
     public static void main(String[] args) {

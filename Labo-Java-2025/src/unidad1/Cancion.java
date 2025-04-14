@@ -11,17 +11,17 @@ public class Cancion {
         this.autor="";
     }
 
-    public Cancion(String t, String a){
-        this.titulo=t;
-        this.autor=a;
+    public Cancion(String titulo, String autor){
+        this.titulo=titulo;
+        this.autor=autor;
     }
 
     public String getTitulo() {
-        return titulo;
+        return this.titulo;
     }
 
     public String getAutor() {
-        return autor;
+        return this.autor;
     }
 
     public void setAutor(String autor) {
@@ -44,6 +44,6 @@ public class Cancion {
         c1.setAutor(a);
         c1.setTitulo(t);
 
-        System.out.println("Ahora reproduciendo "+c1.getTitulo()+" de "+c1.getAutor());
+        System.out.println("Ahora reproduciendo '"+c1.getTitulo()+"' de "+c1.getAutor());
     }
 }

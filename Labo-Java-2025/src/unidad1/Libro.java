@@ -1,5 +1,7 @@
 package unidad1;
 
+import tiempo.Fecha;
+
 public class Libro {
     private String titulo;
     private Persona autor;
@@ -36,27 +38,27 @@ public class Libro {
     }
 
     public String getTitulo() {
-        return titulo;
+        return this.titulo;
     }
 
     public Persona getAutor() {
-        return autor;
+        return this.autor;
     }
 
     public int getISBN() {
-        return ISBN;
+        return this.ISBN;
     }
 
     public int getPaginas() {
-        return paginas;
+        return this.paginas;
     }
 
     public String getEditorial() {
-        return editorial;
+        return this.editorial;
     }
 
     public Fecha getFechaPublicacion() {
-        return fechaPublicacion;
+        return this.fechaPublicacion;
     }
 
     public void setTitulo(String titulo) {
