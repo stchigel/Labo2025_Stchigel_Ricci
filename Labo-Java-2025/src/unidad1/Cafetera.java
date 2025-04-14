@@ -68,7 +68,9 @@ public class Cafetera {
         c1.servirTaza(250);
         System.out.println("Ahora tiene: " + c1.getCantidadActual());
         c1.vaciarCafetera();
-        c1.agregarCafe(25000);
+        c1.agregarCafe(250);
+        System.out.println("Ahora tiene: " + c1.getCantidadActual());
+        c1.llenarCafetera();
         System.out.println("Ahora tiene: " + c1.getCantidadActual());
     }
 }

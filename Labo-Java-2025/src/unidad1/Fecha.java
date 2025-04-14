@@ -133,5 +133,16 @@ public class Fecha {
         f1.corta();
         f1.siguiente();
         f1.larga();
+        f1.anterior();
+        f1.corta();
+        Fecha f2 = new Fecha();
+        f2.setAnio(1995);
+        f2.setDia(15);
+        f2.setMes(13);
+        f2.valida();
+        f2.corta();
+        System.out.println("Es mas grande? " + f1.mayorQue(f2));
+        System.out.println("Es mas chico? " + f1.menorQue(f2));
+        System.out.println("Es igual? " + f1.igualQue(f2));
     }
 }
