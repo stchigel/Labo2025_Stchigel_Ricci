@@ -1,33 +1,14 @@
-
-/*10*/
-CREATE TABLE `CancellOrders` (
-  `orderNumber` int NOT NULL,
-  `orderDate` date NOT NULL,
-  `shippedDate` date DEFAULT NULL,
-  `customerNumber` int NOT NULL,
-  `status` varchar(15) NOT NULL,
-  PRIMARY KEY (`orderNumber`),
-  KEY `customerNumber` (`customerNumber`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 delimiter //
-create procedure getCiudadesOffices(out listaCiudades text) 
+create function buscarUsuario(idUsu int, nombre text) returns int deterministic
 begin
-	declare hayFilas boolean default 1;
-	declare cancORD varchar(45) default "";
-	declare nombreCursor cursor for select status from orders;
-	declare continue handler for not found set hayFilas = 0;
-	open nombreCursor;
-	bucle:loop
-		fetch nombreCursor into cancORD;
-		if hayFilas = 0 then
-			leave bucle;
-		end if;
-		set listaCiudades =  concat(listaCiudades, ",", ciudadAct);
-	end loop bucle;
-	close nombreCursor;
+		declare cantOrds int default 0;
+		select count(idPedido) into cantOrds from pedidos where Usuario_codigo = idUsu;
+		return cantOrds;
 end//
 delimiter ;
-call getCiudadesOffices(@listaCiudades);
-select @listaCiudades;
+select buscarUsuario(1, "Ernestito");
+
+create view Vista as select
+
+/*ej chatgtp*/
+ 

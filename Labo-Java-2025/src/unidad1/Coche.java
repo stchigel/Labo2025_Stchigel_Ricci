@@ -56,4 +56,15 @@ public class Coche {
         return velocidad;
     }
 
+    public static void main(String[] args) {
+        Coche c1 = new Coche("Volkswagen","Suran 2012", "Rojo", 7);
+        System.out.println("Velocidad actual: " + c1.mostrarVelocidadActual());
+        System.out.println("Acelero 5");
+        c1.acelerar(5);
+        System.out.println("Velocidad actual: " + c1.mostrarVelocidadActual());
+        System.out.println("freno");
+        c1.frenar();
+        System.out.println("Velocidad actual: " + c1.mostrarVelocidadActual());
+    }
+
 }
