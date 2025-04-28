@@ -6,26 +6,20 @@ public class Equipo {
     String nombre;
     String barrio;
     ArrayList<Jugador> jugadores;
-    Boolean manana;
-    Boolean tarde;
-    Boolean noche;
+    int turno;
 
     public Equipo() {
         this.nombre = "N/A";
         this.barrio = "N/A (como san lorenzo)";
-        this.jugadores = new ArrayList<Jugador>();
-        this.manana = false;
-        this.tarde = false;
-        this.noche = false;
+        this.jugadores = new ArrayList<>();
+        this.turno=0;
     }
 
-    public Equipo(String nombre, String barrio, ArrayList<Jugador> jugadores, Boolean manana, Boolean tarde, Boolean noche) {
+    public Equipo(String nombre, String barrio, ArrayList<Jugador> jugadores, int turno) {
         this.nombre = nombre;
         this.barrio = barrio;
         this.jugadores = jugadores;
-        this.manana = manana;
-        this.tarde = tarde;
-        this.noche = noche;
+        this.turno = turno;
     }
 
     public String getNombre() {
@@ -52,28 +46,12 @@ public class Equipo {
         this.jugadores = jugadores;
     }
 
-    public Boolean getManana() {
-        return this.manana;
+    public int getTurno() {
+        return this.turno;
     }
 
-    public void setManana(Boolean manana) {
-        this.manana = manana;
-    }
-
-    public Boolean getTarde() {
-        return this.tarde;
-    }
-
-    public void setTarde(Boolean tarde) {
-        this.tarde = tarde;
-    }
-
-    public Boolean getNoche() {
-        return this.noche;
-    }
-
-    public void setNoche(Boolean noche) {
-        this.noche = noche;
+    public void setTurno(int turno) {
+        this.turno = turno;
     }
 
     public Boolean numeroOcupadoJugador(Jugador jugador){

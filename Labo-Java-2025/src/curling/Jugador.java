@@ -1,22 +1,22 @@
 package curling;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Jugador {
     String nombre;
-    Date fechaNacimiento;
+    LocalDate fechaNacimiento;
     int numeroCamiseta;
     Boolean capitan;
 
     public Jugador() {
         this.nombre = "N/A";
-        this.fechaNacimiento = new Date();
+        this.fechaNacimiento = LocalDate.of(1, 1, 1);
         this.numeroCamiseta= 0;
         this.capitan = false;
     }
 
-    public Jugador(String nombre, Date fechaNacimiento, int numeroCamiseta, Boolean capitan) {
+    public Jugador(String nombre, LocalDate fechaNacimiento, int numeroCamiseta, Boolean capitan) {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.numeroCamiseta = numeroCamiseta;
@@ -31,11 +31,11 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return this.fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

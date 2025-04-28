@@ -1,21 +1,22 @@
 package curling;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Partido {
     Equipo equipoLocal;
     Equipo equipoVisitante;
-    Date dia;
+    LocalDate dia;
     String turno;
 
     public Partido() {
         this.equipoLocal = new Equipo();
         this.equipoVisitante = new Equipo();
-        this.dia = new Date();
+        this.dia = LocalDate.of(1,1,1);
         this.turno = "N/A";
     }
 
-    public Partido(Equipo equipoLocal, Equipo equipoVisitante, Date dia, String turno) {
+    public Partido(Equipo equipoLocal, Equipo equipoVisitante, LocalDate dia, String turno) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
         this.dia = dia;
@@ -38,11 +39,11 @@ public class Partido {
         this.equipoVisitante = equipoVisitante;
     }
 
-    public Date getDia() {
+    public LocalDate getDia() {
         return this.dia;
     }
 
-    public void setDia(Date dia) {
+    public void setDia(LocalDate dia) {
         this.dia = dia;
     }
 
