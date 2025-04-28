@@ -13,12 +13,14 @@ public class Alumno {
     private Fecha fechaNacimiento;
     private int edad;
     private ArrayList<Double> listaDeNotas;
+    private ArrayList<Materia> materias;
 
     public Alumno(){
         this.nombre = "N/A";
         this.apellido = "N/A";
         this.fechaNacimiento = new Fecha(25, 12, 0);
         this.listaDeNotas = new ArrayList<Double>();
+        ArrayList<Materia> materias = new ArrayList<Materia>();
     }
 
     public Alumno(String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Double> listaDeNotas) {

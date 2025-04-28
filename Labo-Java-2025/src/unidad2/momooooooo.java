@@ -1,5 +1,9 @@
 package unidad2;
 
+import unidad1.Cancion;
+
+import java.util.ArrayList;
+
 public class momooooooo {
     /*te tengo al lado y me siento solo
     * el miedo me come y no entiendo como
@@ -41,5 +45,34 @@ public class momooooooo {
     * tito calderon
     *
     * viruzz*/
+    int porcentajeGrasaCorporal;
+    int cafeteras;
+    int propiedades;
+    int ladrillos;
+    int discoPavaroti;
+    int victoriasVSviruzz;
+    int fantasmamometrosRotos;
+    ArrayList<Cancion> reguetonViejaEscuela;
 
+    public momooooooo() {
+        this.porcentajeGrasaCorporal = 5;
+        this.cafeteras = 4;
+        this.propiedades = 3;
+        this.ladrillos = 2;
+        this.discoPavaroti = 1;
+        this.victoriasVSviruzz = 0;
+        this.fantasmamometrosRotos = 2;
+        this.reguetonViejaEscuela = new ArrayList<Cancion>();
+    }
+    
+    public momooooooo(int porcentajeGrasaCorporal, int cafeteras, int propiedades, int ladrillos, int discoPavaroti, int victoriasVSviruzz, int fantasmamometrosRotos, ArrayList<Cancion> reguetonViejaEscuela) {
+        this.porcentajeGrasaCorporal = porcentajeGrasaCorporal;
+        this.cafeteras = cafeteras;
+        this.propiedades = propiedades;
+        this.ladrillos = ladrillos;
+        this.discoPavaroti = discoPavaroti;
+        this.victoriasVSviruzz = victoriasVSviruzz;
+        this.fantasmamometrosRotos = fantasmamometrosRotos;
+        this.reguetonViejaEscuela = reguetonViejaEscuela;
+    }
 }
