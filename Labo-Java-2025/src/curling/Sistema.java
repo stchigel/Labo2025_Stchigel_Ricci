@@ -1,6 +1,7 @@
 package curling;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Sistema {
@@ -24,7 +25,13 @@ public class Sistema {
             Boolean yaHayCapitan=false;
             for (int j = 0; j < 11; j++) {
                 Jugador newJugador = new Jugador();
+                Date newDate = new Date();
                 System.out.println("Ingresar datos del jugador n" + j + " :");
+                System.out.println("Ingresar nombre del jugador");
+                newJugador.setNombre(sc.nextLine());
+                System.out.println("Ingresar nacimiento: ");
+                System.out.print("Día ");
+                newDate.setDate(sc.nextInt());
             }
         }
     }
