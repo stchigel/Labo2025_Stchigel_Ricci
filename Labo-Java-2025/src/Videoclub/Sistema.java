@@ -60,6 +60,8 @@ public class Sistema {
         return clubVideoMaspelis;
     }
 
+
+
     public static void main(String[] args) {
             Sistema s = new Sistema();
             ArrayList<Videoclub> Videoclubs=new ArrayList<>();
