@@ -5,13 +5,28 @@ import unidad1.Persona;
 import java.util.ArrayList;
 
 public class Estanteria {
+    private int numero;
     private ArrayList<Pelicula> peliculas;
 
-    public Estanteria(ArrayList<Pelicula> peliculas) {
+    public Estanteria(int numero, ArrayList<Pelicula> peliculas) {
+        this.numero = numero;
         this.peliculas = peliculas;
     }
-    public Estanteria() {
+    public Estanteria(int numero) {
+        this.numero = numero;
         this.peliculas = new ArrayList<>();
+    }
+    public Estanteria() {
+        this.numero = 0;
+        this.peliculas = new ArrayList<>();
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     public ArrayList<Pelicula> getPeliculas() {
@@ -24,6 +39,18 @@ public class Estanteria {
 
     public void addPelicula(Pelicula pelicula) {
         this.peliculas.add(pelicula);
+    }
+
+    public void removePelicula(Pelicula pelicula) {
+        this.peliculas.remove(pelicula);
+    }
+
+    public void updatePelicula(Pelicula peliculaViejo, Pelicula peliculaNuevo) {
+        for (Pelicula pelicula : this.peliculas){
+            if (pelicula==peliculaViejo){
+                pelicula=peliculaNuevo;
+            }
+        }
     }
 
     public Pelicula mayorTiempo(){

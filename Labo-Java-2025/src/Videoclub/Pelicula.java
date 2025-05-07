@@ -89,6 +89,31 @@ public class Pelicula {
         this.idiomas.add(idioma);
     }
 
+    public void printInfo() {
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Género: " + this.genero);
+        System.out.println("Duración: " + this.duracion + " minutos");
+
+        System.out.print("Directores: ");
+        for (Persona director : this.directores) {
+            System.out.print(director.getNombre() + " ");
+        }
+        System.out.println();
+
+        System.out.print("Actores: ");
+        for (Persona actor : this.actores) {
+            System.out.print(actor.getNombre() + " ");
+        }
+        System.out.println();
+
+        System.out.print("Idiomas: ");
+        for (String idioma : this.idiomas) {
+            System.out.print(idioma + " ");
+        }
+        System.out.println();
+    }
+
+
     public ArrayList<Persona> actoresMayores(){
         ArrayList<Persona> actoresMayores= new ArrayList<>();
         for(Persona actoor : this.actores){
