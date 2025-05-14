@@ -1,6 +1,6 @@
 package unidad2;
 
-import unidad1.Cancion;
+import Medios.Cancion;
 
 import java.util.ArrayList;
 

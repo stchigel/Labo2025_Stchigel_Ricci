@@ -1,7 +1,8 @@
-package unidad1;
+package Bases;
 
 public class Persona {
     private String nombre;
+    private String apellido;
     private int edad;
     private String direccion;
 
@@ -15,6 +16,15 @@ public class Persona {
         this.nombre=nombre;
         this.edad=edad;
         this.direccion=direccion;
+    }
+
+    public Persona(String nombre, String apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+
+    public Persona(String nombre){
+        this.nombre=nombre;
     }
 
     public int getEdad() {
@@ -39,6 +49,14 @@ public class Persona {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public void imprimir(){

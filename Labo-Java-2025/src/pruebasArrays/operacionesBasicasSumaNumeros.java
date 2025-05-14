@@ -1,4 +1,4 @@
-package unidad2;
+package pruebasArrays;
 
 import java.util.ArrayList;
 

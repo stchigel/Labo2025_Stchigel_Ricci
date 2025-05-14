@@ -1,5 +1,5 @@
 package Videoclub;
-import unidad1.Persona;
+import Bases.Persona;
 
 import java.util.ArrayList;
 

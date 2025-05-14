@@ -1,6 +1,7 @@
-package unidad1;
+package Medios;
 
 import tiempo.Fecha;
+import Bases.Persona;
 
 public class Libro {
     private String titulo;

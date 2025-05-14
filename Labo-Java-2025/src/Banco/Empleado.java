@@ -1,51 +1,32 @@
 package Banco;
+import Bases.Persona;
+
 import java.time.LocalDate;
 
-public class Persona {
-    String nombre;
-    String apellido;
+public class Empleado extends Persona {
     int dni;
     LocalDate antiguedad;
     LocalDate salida;
 
-    public Persona() {
-        this.nombre = "N/A";
-        this.apellido = "N/A";
+    public Empleado() {
+        super("N/A", "N/A");
         this.dni = 0;
         this.antiguedad = LocalDate.of(1, 1, 1);
         this.salida = LocalDate.of(1, 1, 1);
     }
 
-    public Persona(String nombre, String apellido, int dni, LocalDate antiguedad, LocalDate salida) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Empleado(String nombre, String apellido, int dni, LocalDate antiguedad, LocalDate salida) {
+        super(nombre, apellido);
         this.dni = dni;
         this.antiguedad = antiguedad;
         this.salida = salida;
     }
 
-    public Persona(String nombre, String apellido, int dni, LocalDate antiguedad) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Empleado(String nombre, String apellido, int dni, LocalDate antiguedad) {
+        super(nombre, apellido);
         this.dni = dni;
         this.antiguedad = antiguedad;
         this.salida = null;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public int getDni() {

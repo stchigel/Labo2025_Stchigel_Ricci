@@ -6,7 +6,7 @@ public class BancoNacion {
     String direccion;
     Boolean aja;
     Boolean eje;
-    ArrayList<Persona> empleados;
+    ArrayList<Empleado> empleados;
 
     public BancoNacion() {
         this.direccion = "N/A";
@@ -15,7 +15,7 @@ public class BancoNacion {
         this.empleados = new ArrayList<>();
     }
 
-    public BancoNacion(String direccion, Boolean aja, Boolean eje, ArrayList<Persona> empleados) {
+    public BancoNacion(String direccion, Boolean aja, Boolean eje, ArrayList<Empleado> empleados) {
         this.direccion = direccion;
         this.aja = aja;
         this.eje = eje;
@@ -61,15 +61,15 @@ public class BancoNacion {
         this.eje = eje;
     }
 
-    public ArrayList<Persona> getEmpleados() {
+    public ArrayList<Empleado> getEmpleados() {
         return empleados;
     }
 
-    public void setEmpleados(ArrayList<Persona> empleados) {
+    public void setEmpleados(ArrayList<Empleado> empleados) {
         this.empleados = empleados;
     }
 
-    public void agregarTrabajador(Persona empleado){
+    public void agregarTrabajador(Empleado empleado){
         this.empleados.add(empleado);
     }
 
@@ -77,10 +77,10 @@ public class BancoNacion {
         return this.empleados.size();
     }
 
-    public Persona empleadoMayorAntiguedad(){
-        Persona empleadoMayor=this.empleados.getFirst();
+    public Empleado empleadoMayorAntiguedad(){
+        Empleado empleadoMayor=this.empleados.getFirst();
         int cantMayor=this.empleados.getFirst().antiguedad();
-        for (Persona empActual : this.empleados){
+        for (Empleado empActual : this.empleados){
             if(empActual.antiguedad()>cantMayor){
                 cantMayor=empActual.antiguedad();
                 empleadoMayor=empActual;

@@ -1,6 +1,6 @@
-package unidad2;
+package pruebasArrays;
 
-import unidad1.Persona;
+import Bases.Persona;
 
 import java.util.ArrayList;
 

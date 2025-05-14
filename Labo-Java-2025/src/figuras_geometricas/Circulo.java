@@ -1,6 +1,6 @@
 package figuras_geometricas;
 
-public class Circulo {
+public class Circulo extends Forma {
     private double radio;
 
     public Circulo(){

@@ -1,34 +1,27 @@
 package curling;
 
+import Bases.Persona;
+
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public class Jugador {
-    String nombre;
+public class Jugador extends Persona {
     LocalDate fechaNacimiento;
     int numeroCamiseta;
     Boolean capitan;
 
     public Jugador() {
-        this.nombre = "N/A";
+        super("N/A");
         this.fechaNacimiento = LocalDate.of(1, 1, 1);
         this.numeroCamiseta= 0;
         this.capitan = false;
     }
 
     public Jugador(String nombre, LocalDate fechaNacimiento, int numeroCamiseta, Boolean capitan) {
-        this.nombre = nombre;
+        super(nombre);
         this.fechaNacimiento = fechaNacimiento;
         this.numeroCamiseta = numeroCamiseta;
         this.capitan = capitan;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public LocalDate getFechaNacimiento() {

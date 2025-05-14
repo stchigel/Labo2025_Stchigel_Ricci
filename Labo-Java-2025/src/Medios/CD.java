@@ -1,10 +1,9 @@
-package unidad2;
-import unidad1.Cancion;
-import unidad1.Persona;
+package Medios;
+import Bases.Persona;
 
 import java.util.ArrayList;
 
-public class CD {
+public class CD{
     private ArrayList<Cancion> Canciones;
 
     public CD(){

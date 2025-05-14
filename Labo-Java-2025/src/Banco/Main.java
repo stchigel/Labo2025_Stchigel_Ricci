@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class Main { /*Si o si hay que agregar esto*/
 public static void main(String[] args) {
-    Persona p1 = new Persona("Miguel", "Lopez", 32987990,
+    Empleado p1 = new Empleado("Miguel", "Lopez", 32987990,
             LocalDate.of(1985, 10, 12), LocalDate.of(2020, 5, 8));
-    Persona p2 = new Persona("Juana", "Gomez", 39987990,
+    Empleado p2 = new Empleado("Juana", "Gomez", 39987990,
             LocalDate.of(1986, 7, 28));
-    Persona p3 = new Persona("Candela", "Navarro", 40987990,
+    Empleado p3 = new Empleado("Candela", "Navarro", 40987990,
             LocalDate.of(1993, 2, 4), LocalDate.of(2017, 5, 25));
 
     BancoNacion sucursalUrquiza = new BancoNacion("Av. Triunvirato 3450", true, false);
@@ -26,7 +26,7 @@ public static void main(String[] args) {
     sucursalPueyrredon.cantidadTrabajadores();
 
     for (BancoNacion b : sucursales) {
-        Persona p = b.empleadoMayorAntiguedad();
+        Empleado p = b.empleadoMayorAntiguedad();
         System.out.println(p.getNombre() + " " + p.antiguedad());
     }
 }

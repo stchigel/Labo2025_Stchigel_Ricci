@@ -1,4 +1,6 @@
-package unidad1;
+package Medios;
+
+import Bases.Persona;
 
 import java.util.Scanner;
 

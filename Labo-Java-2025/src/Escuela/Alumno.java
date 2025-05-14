@@ -1,49 +1,29 @@
-package unidad2;
+package Escuela;
 
 import tiempo.Fecha;
+import Bases.Persona;
 
 import java.util.ArrayList;
 import java.time.LocalDate;
 
 
 
-public class Alumno {
-    private String nombre;
-    private String apellido;
+public class Alumno extends Persona {
     private Fecha fechaNacimiento;
-    private int edad;
     private ArrayList<Double> listaDeNotas;
     private ArrayList<Materia> materias;
 
     public Alumno(){
-        this.nombre = "N/A";
-        this.apellido = "N/A";
+        super("N/A", "N/A");
         this.fechaNacimiento = new Fecha(25, 12, 0);
         this.listaDeNotas = new ArrayList<Double>();
         ArrayList<Materia> materias = new ArrayList<Materia>();
     }
 
     public Alumno(String nombre, String apellido, Fecha fechaNacimiento, ArrayList<Double> listaDeNotas) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+        super(nombre, apellido);
         this.fechaNacimiento = fechaNacimiento;
         this.listaDeNotas = listaDeNotas;
-    }
-
-    public String getNombre() {
-        return this.nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return this.apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public Fecha getfechaNacimiento() {

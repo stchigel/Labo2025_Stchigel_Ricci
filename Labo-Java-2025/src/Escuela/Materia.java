@@ -1,6 +1,4 @@
-package unidad2;
-
-import tiempo.Fecha;
+package Escuela;
 
 import java.util.ArrayList;
 
