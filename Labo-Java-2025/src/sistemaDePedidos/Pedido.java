@@ -2,23 +2,26 @@ package sistemaDePedidos;
 
 import tiempo.Fecha;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Pedido{
     /*Al registrar un pedido, incluir fecha de creación, plato, solicitante, hora de entrega y estado de entrega.*/
-    private Fecha creacion;
+    private LocalDate creacion;
     private Plato plato;
     private Persona solicitante;
-    private int hora;
+    private LocalTime hora;
     private String estado;
 
     public Pedido() {
-        this.creacion = new Fecha(0, 0, 0);
+        this.creacion = LocalDate.now();
         this.plato = new Plato();
         this.solicitante = new Persona();
-        this.hora = 0;
+        this.hora = LocalTime.now();
         this.estado = "No existe";
     }
 
-    public Pedido(Fecha creacion, Plato plato, Persona solicitante, int hora, String estado) {
+    public Pedido(LocalDate creacion, Plato plato, Persona solicitante, LocalTime hora, String estado) {
         this.creacion = creacion;
         this.plato = plato;
         this.solicitante = solicitante;
@@ -26,11 +29,11 @@ public class Pedido{
         this.estado = estado;
     }
 
-    public Fecha getCreacion() {
+    public LocalDate getCreacion() {
         return creacion;
     }
 
-    public void setCreacion(Fecha creacion) {
+    public void setCreacion(LocalDate creacion) {
         this.creacion = creacion;
     }
 
@@ -50,11 +53,11 @@ public class Pedido{
         this.solicitante = solicitante;
     }
 
-    public int getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(int hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 
@@ -64,5 +67,13 @@ public class Pedido{
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public Double calcularPrecio(){
+        if(this.solicitante instanceof Profesor){
+            return this.plato.getPrecio()-this.plato.getPrecio()*((Profesor) this.solicitante).getDescuento();
+        } else {
+            return this.plato.getPrecio();
+        }
     }
 }
