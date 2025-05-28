@@ -1,4 +1,4 @@
-package compragamer;
+package compragamer.Compra;
 
 public class Cliente extends sistemaDePedidos.Persona{
     private String celular;

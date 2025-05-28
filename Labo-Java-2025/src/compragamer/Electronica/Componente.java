@@ -1,4 +1,4 @@
-package compragamer;
+package compragamer.Electronica;
 
 public class Componente {
     private String modelo;
@@ -50,5 +50,9 @@ public class Componente {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public void actualizarStock(){
+        stock+=1;
     }
 }

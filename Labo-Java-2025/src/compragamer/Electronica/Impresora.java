@@ -1,4 +1,4 @@
-package compragamer;
+package compragamer.Electronica;
 
 import java.util.ArrayList;
 
