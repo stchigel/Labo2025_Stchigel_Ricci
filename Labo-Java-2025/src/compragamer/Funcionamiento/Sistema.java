@@ -25,6 +25,10 @@ public class Sistema{
         this.pedidos = pedidos;
     }
 
+    public void agregarPedido(Pedido pedido){
+        pedidos.add(pedido);
+    }
+
     public void actualizarStock(){
         for(Pedido p:pedidos){
             p.actStock();
