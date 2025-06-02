@@ -11,10 +11,8 @@ public class SensorTemperatura extends Dispositivo {
         super(estado, medida, umbralInicial, anioAdquisicion);
     }
 
-    public void TemperaturaSube(){
-        if(super.isEstado()) {
+    public void sensorActivado(){
             System.out.println("Cuidado, la temperatura sube");
-        }
     }
     /*freed form desire, mind and sense are purified*/
 }

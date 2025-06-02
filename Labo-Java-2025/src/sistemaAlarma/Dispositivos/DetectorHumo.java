@@ -11,9 +11,7 @@ public class DetectorHumo extends Dispositivo {
         super(estado, medida, umbralInicial, anioAdquisicion);
     }
 
-    public void llamarBomberos(){
-        if(super.isEstado()){
+    public void sensorActivado(){
             System.out.println("Humo en el edificio, llamen a los bomberos");
-        }
     }
 }

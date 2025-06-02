@@ -3,31 +3,20 @@ package sistemaAlarma.Dispositivos;
 import java.time.LocalDate;
 
 public class Dispositivo {
-    private boolean estado;
     private Double medida;
     private Double umbralInicial;
     private LocalDate anioAdquisicion;
 
     public Dispositivo(){
-        this.estado = false;
         this.medida = 16.25;
         this.umbralInicial = 20.0;
         this.anioAdquisicion = LocalDate.now();
     }
 
-    public Dispositivo(boolean estado, Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
-        this.estado = estado;
+    public Dispositivo(Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
         this.medida = medida;
         this.umbralInicial = umbralInicial;
         this.anioAdquisicion = anioAdquisicion;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
     }
 
     public LocalDate getAnioAdquisicion() {
@@ -56,7 +45,11 @@ public class Dispositivo {
 
     public void calcularUmbral(){
         if(medida>umbralInicial){
-            setEstado(true);
+            sensorActivado();
         }
+    }
+
+    public void sensorActivado(){
+
     }
 }

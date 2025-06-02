@@ -18,6 +18,13 @@ public class Persona {
         this.direccion=direccion;
     }
 
+    public Persona(String nombre, String apellido, String direccion){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.edad=0;
+        this.direccion=direccion;
+    }
+
     public Persona(String nombre, String apellido){
         this.nombre=nombre;
         this.apellido=apellido;

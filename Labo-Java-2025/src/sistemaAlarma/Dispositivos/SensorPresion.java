@@ -12,8 +12,6 @@ public class SensorPresion extends Dispositivo {
     }
 
     public void sensorActivado(){
-        if(super.isEstado()){
             System.out.println("Sensor de presion activado");
-        }
     }
 }
