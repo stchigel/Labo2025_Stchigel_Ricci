@@ -71,7 +71,7 @@ public class Sistema {
         for(Empleado e : empleados){
             for(Llamada l : llamadas){
                 if(e.equals(l.getOrigen())){
-                    if(!l.getDestino().getPais().equals(e.getPais())){
+                    if(!l.getDestino().getDireccion().equals(e.getDireccion())){
                         aux1+=l.getDuracion();
                     }
                 }

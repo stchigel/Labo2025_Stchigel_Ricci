@@ -4,11 +4,14 @@ import tiempo.Fecha;
 import Bases.Persona;
 
 public class Libro {
+    public enum Editorial {
+        Kapelusz, Sudamericana, Atlántida, El_Ateneo, Interzona, Sur, Alianza
+        }
     private String titulo;
     private Persona autor;
     private int ISBN;
     private int paginas;
-    private String editorial;
+    private Editorial editorial;
     private Fecha fechaPublicacion;
 
     public Libro(){
@@ -16,11 +19,11 @@ public class Libro {
         this.autor = new Persona();
         this.ISBN=0;
         this.paginas=0;
-        this.editorial="N/A";
+        this.editorial=Editorial.Sur;
         this.fechaPublicacion= new Fecha();
     }
 
-    public Libro(String titulo, Persona autor, int ISBN, int paginas, String editorial, Fecha fechaPublicacion){
+    public Libro(String titulo, Persona autor, int ISBN, int paginas, Editorial editorial, Fecha fechaPublicacion){
         this.titulo=titulo;
         this.autor=autor;
         this.ISBN=ISBN;
@@ -29,7 +32,7 @@ public class Libro {
         this.fechaPublicacion=fechaPublicacion;
     }
 
-    public Libro(String titulo, String nm, int ed, String dr, int ISBN, int paginas, String editorial, int d, int m, int a){
+    public Libro(String titulo, String nm, int ed, String dr, int ISBN, int paginas, Editorial editorial, int d, int m, int a){
         this.titulo=titulo;
         this.autor=new Persona(nm, ed, dr);
         this.ISBN=ISBN;
@@ -54,8 +57,12 @@ public class Libro {
         return this.paginas;
     }
 
-    public String getEditorial() {
+    public Editorial getEditorial() {
         return this.editorial;
+    }
+
+    public String getEditorialNombre() {
+        return this.editorial.name();
     }
 
     public Fecha getFechaPublicacion() {
@@ -78,7 +85,7 @@ public class Libro {
         this.paginas = paginas;
     }
 
-    public void setEditorial(String editorial) {
+    public void setEditorial(Editorial editorial) {
         this.editorial = editorial;
     }
 
@@ -107,10 +114,10 @@ public class Libro {
     public static void main(String[] args) {
         Persona autor = new Persona("Edgar Alan Poe", 87, "El mcdonalds de walmart");
         Fecha fechaPublicacion = new Fecha(13, 07, 1983);
-        Libro l1 = new Libro("El Libro Troll", autor, 1829289434, 325, "MasivoBro Publicaciones", fechaPublicacion);
+        Libro l1 = new Libro("El Libro Troll", autor, 1829289434, 325, /*"MasivoBro Publicaciones"*/ Editorial.Kapelusz, fechaPublicacion);
         System.out.println(l1.getTitulo() + " de " + l1.getAutor().getNombre());
 
-        Libro l2 = new Libro("El libro Troll 2", "Dante", 3457, "España", 23452343, 32, "1xBet", 13, 25, 1984);
+        Libro l2 = new Libro("El libro Troll 2", "Dante", 3457, "España", 23452343, 32, Editorial.Sudamericana/*"1xBet"*/, 13, 25, 1984);
 
         System.out.println("Fue " + l2.getTitulo() + " publicado después que " + l1.getTitulo() + "? " + l1.menorQue(l2));
     }

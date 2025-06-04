@@ -6,16 +6,16 @@ public class Equipo {
     String nombre;
     String barrio;
     ArrayList<Jugador> jugadores;
-    int turno;
+    Turno turno;
 
     public Equipo() {
         this.nombre = "N/A";
         this.barrio = "N/A (como san lorenzo)";
         this.jugadores = new ArrayList<>();
-        this.turno=0;
+        this.turno=Turno.MANIANA;
     }
 
-    public Equipo(String nombre, String barrio, ArrayList<Jugador> jugadores, int turno) {
+    public Equipo(String nombre, String barrio, ArrayList<Jugador> jugadores, Turno turno) {
         this.nombre = nombre;
         this.barrio = barrio;
         this.jugadores = jugadores;
@@ -46,11 +46,14 @@ public class Equipo {
         this.jugadores = jugadores;
     }
 
-    public int getTurno() {
+    public Turno getTurno() {
         return this.turno;
     }
+    public String getTurnoNombre() {
+        return this.turno.name();
+    }
 
-    public void setTurno(int turno) {
+    public void setTurno(Turno turno) {
         this.turno = turno;
     }
 

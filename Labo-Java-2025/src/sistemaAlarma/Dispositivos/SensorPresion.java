@@ -7,8 +7,8 @@ public class SensorPresion extends Dispositivo {
         super();
     }
 
-    public SensorPresion(boolean estado, Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
-        super(estado, medida, umbralInicial, anioAdquisicion);
+    public SensorPresion(Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
+        super(medida, umbralInicial, anioAdquisicion);
     }
 
     public void sensorActivado(){

@@ -7,16 +7,16 @@ public class Partido {
     Equipo equipoLocal;
     Equipo equipoVisitante;
     LocalDate dia;
-    String turno;
+    Turno turno;
 
     public Partido() {
         this.equipoLocal = new Equipo();
         this.equipoVisitante = new Equipo();
         this.dia = LocalDate.of(1,1,1);
-        this.turno = "N/A";
+        this.turno = Turno.MANIANA;
     }
 
-    public Partido(Equipo equipoLocal, Equipo equipoVisitante, LocalDate dia, String turno) {
+    public Partido(Equipo equipoLocal, Equipo equipoVisitante, LocalDate dia, Turno turno) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
         this.dia = dia;
@@ -47,11 +47,15 @@ public class Partido {
         this.dia = dia;
     }
 
-    public String getTurno() {
+    public Turno getTurno() {
         return this.turno;
     }
 
-    public void setTurno(String turno) {
+    public String getTurnoNombre() {
+        return this.turno.name();
+    }
+
+    public void setTurno(Turno turno) {
         this.turno = turno;
     }
 }

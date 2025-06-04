@@ -20,7 +20,19 @@ public class SistemaCurling {
             System.out.println("Ingresar barrio del equipo");
             newEquipo.setBarrio(sc.nextLine());
             System.out.println("Ingresar turno (1=Mañana, 2=Tarde, 3=Noche)");
-            newEquipo.setTurno(sc.nextInt());
+            switch (sc.nextInt()){
+                case 1:
+                    newEquipo.setTurno(Turno.MANIANA);
+                    break;
+                case 2:
+                    newEquipo.setTurno(Turno.TARDE);
+                    break;
+                case 3:
+                    newEquipo.setTurno(Turno.NOCHE);
+                    break;
+                default:
+                    break;
+            }
             Boolean yaHayCapitan=false;
             for (int j = 0; j < 11; j++) {
                 Jugador newJugador = new Jugador();
@@ -62,13 +74,13 @@ public class SistemaCurling {
 
         for (Equipo equipo : equipos){
             switch (equipo.getTurno()){
-                case 1:
+                case Turno.MANIANA:
                     equiposManana.add(equipo);
                     break;
-                case 2:
+                case Turno.TARDE:
                     equiposTarde.add(equipo);
                     break;
-                case 3:
+                case Turno.NOCHE:
                     equiposNoche.add(equipo);
                     break;
                 default:
@@ -81,7 +93,7 @@ public class SistemaCurling {
                 Partido partido = new Partido();
                 partido.setEquipoLocal(equiposManana.get(i));
                 partido.setEquipoVisitante(equiposManana.get(j));
-                partido.setTurno("Mañana");
+                partido.setTurno(Turno.MANIANA);
                 partido.setDia(hoy.plusDays(30 + i));
                 partidos.add(partido);
             }
@@ -91,7 +103,7 @@ public class SistemaCurling {
                 Partido partido = new Partido();
                 partido.setEquipoLocal(equiposTarde.get(i));
                 partido.setEquipoVisitante(equiposTarde.get(j));
-                partido.setTurno("Mañana");
+                partido.setTurno(Turno.MANIANA);
                 partido.setDia(hoy.plusDays(30 + i));
                 partidos.add(partido);
             }
@@ -101,7 +113,7 @@ public class SistemaCurling {
                 Partido partido = new Partido();
                 partido.setEquipoLocal(equiposNoche.get(i));
                 partido.setEquipoVisitante(equiposNoche.get(j));
-                partido.setTurno("Mañana");
+                partido.setTurno(Turno.MANIANA);
                 partido.setDia(hoy.plusDays(30 + i));
                 partidos.add(partido);
             }
@@ -111,7 +123,7 @@ public class SistemaCurling {
             System.out.println("Local: " + partido.getEquipoLocal().getNombre());
             System.out.println("Visitante: " + partido.getEquipoVisitante().getNombre());
             System.out.println("Día: " + partido.getDia().toString());
-            System.out.println("Turno: " + partido.getTurno());
+            System.out.println("Turno: " + partido.getTurno().name());
             System.out.println("-------------------------");
         }
     }

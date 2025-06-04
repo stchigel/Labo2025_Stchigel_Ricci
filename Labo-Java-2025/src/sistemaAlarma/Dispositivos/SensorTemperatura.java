@@ -7,8 +7,8 @@ public class SensorTemperatura extends Dispositivo {
         super();
     }
 
-    public SensorTemperatura(boolean estado, Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
-        super(estado, medida, umbralInicial, anioAdquisicion);
+    public SensorTemperatura(Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
+        super(medida, umbralInicial, anioAdquisicion);
     }
 
     public void sensorActivado(){

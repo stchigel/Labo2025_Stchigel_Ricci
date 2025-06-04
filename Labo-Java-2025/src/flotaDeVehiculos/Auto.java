@@ -1,5 +1,6 @@
 package flotaDeVehiculos;
 
+import objetos.Color;
 import tiempo.Fecha;
 
 public class Auto extends CuatroRuedas{
@@ -10,7 +11,7 @@ public class Auto extends CuatroRuedas{
         this.descapotable = false;
     }
 
-    public Auto(String marca, String modelo, String color, int cantidadRuedas, Fecha anioFabricacion, String patente, boolean descapotable) {
+    public Auto(String marca, String modelo, Color color, int cantidadRuedas, Fecha anioFabricacion, String patente, boolean descapotable) {
         super(marca, modelo, color, cantidadRuedas, anioFabricacion, patente);
         this.descapotable = descapotable;
     }

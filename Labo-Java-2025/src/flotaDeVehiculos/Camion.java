@@ -1,5 +1,6 @@
 package flotaDeVehiculos;
 
+import objetos.Color;
 import tiempo.Fecha;
 
 public class Camion extends CuatroRuedas{
@@ -12,7 +13,7 @@ public class Camion extends CuatroRuedas{
         this.pesoAcumulado = 0.0;
     }
 
-    public Camion(String marca, String modelo, String color, int cantidadRuedas, Fecha anioFabricacion, String patente, Double capacidadCarga, Double pesoAcumulado) {
+    public Camion(String marca, String modelo, Color color, int cantidadRuedas, Fecha anioFabricacion, String patente, Double capacidadCarga, Double pesoAcumulado) {
         super(marca, modelo, color, cantidadRuedas, anioFabricacion, patente);
         this.capacidadCarga = capacidadCarga;
         this.pesoAcumulado = pesoAcumulado;

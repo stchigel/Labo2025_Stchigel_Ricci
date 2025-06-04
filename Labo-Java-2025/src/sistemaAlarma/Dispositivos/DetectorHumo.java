@@ -7,8 +7,8 @@ public class DetectorHumo extends Dispositivo {
         super();
     }
 
-    public DetectorHumo(boolean estado, Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
-        super(estado, medida, umbralInicial, anioAdquisicion);
+    public DetectorHumo(Double medida, Double umbralInicial, LocalDate anioAdquisicion) {
+        super(medida, umbralInicial, anioAdquisicion);
     }
 
     public void sensorActivado(){

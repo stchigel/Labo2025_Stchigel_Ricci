@@ -3,17 +3,17 @@ package objetos;
 public class Coche {
     private String marca;
     private String modelo;
-    private String color;
+    private Color color;
     private int velocidad;
 
     public Coche(){
         this.marca="N/A";
         this.modelo="N/A";
-        this.color="N/A";
+        this.color=Color.WHITE;
         this.velocidad=0;
     }
 
-    public Coche(String marca, String modelo, String color, int velocidad){
+    public Coche(String marca, String modelo, Color color, int velocidad){
         this.marca=marca;
         this.modelo=modelo;
         this.color=color;
@@ -24,7 +24,7 @@ public class Coche {
         return this.marca;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return this.color;
     }
 
@@ -32,7 +32,7 @@ public class Coche {
         return this.modelo;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -57,7 +57,7 @@ public class Coche {
     }
 
     public static void main(String[] args) {
-        Coche c1 = new Coche("Volkswagen","Suran 2012", "Rojo", 7);
+        Coche c1 = new Coche("Volkswagen","Suran 2012", Color.RED, 7);
         System.out.println("Velocidad actual: " + c1.mostrarVelocidadActual());
         System.out.println("Acelero 5");
         c1.acelerar(5);

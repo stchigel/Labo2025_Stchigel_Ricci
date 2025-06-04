@@ -1,5 +1,6 @@
 package flotaDeVehiculos;
 
+import objetos.Color;
 import tiempo.Fecha;
 
 public class Bicicleta extends Vehiculo{
@@ -7,7 +8,7 @@ public class Bicicleta extends Vehiculo{
         super();
     }
 
-    public Bicicleta(String marca, String modelo, String color, int cantidadRuedas, Fecha anioFabricacion) {
+    public Bicicleta(String marca, String modelo, Color color, int cantidadRuedas, Fecha anioFabricacion) {
         super(marca, modelo, color, cantidadRuedas, anioFabricacion);
     }
 }
