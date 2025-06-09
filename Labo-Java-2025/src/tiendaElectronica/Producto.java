@@ -4,17 +4,20 @@ public class Producto{
     private String nombre;
     private Double precio;
     private int stock;
+    private Categoria categoria;
 
     public Producto() {
         this.nombre = "N/A";
         this.precio = 0.0;
         this.stock = 0;
+        this.categoria=Categoria.DEFAULT;
     }
 
-    public Producto(String nombre, Double precio, int stock) {
+    public Producto(String nombre, Double precio, int stock, Categoria categoria) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
+        this.categoria=categoria;
     }
 
     public String getNombre() {
@@ -39,5 +42,13 @@ public class Producto{
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }
