@@ -2,9 +2,10 @@ package tiendaElectronica;
 
 public class EquipoDeSonido extends Producto{
     private boolean bluetooth;
+    static String nomCategoria = Categoria.MULTIMEDIA.name();
 
     public EquipoDeSonido() {
-        super("N/A", 0.0, 0, Categoria.MULTIMEDIA);
+        super(Categoria.MULTIMEDIA);
         this.bluetooth = false;
     }
 

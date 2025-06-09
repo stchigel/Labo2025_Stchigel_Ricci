@@ -2,9 +2,10 @@ package tiendaElectronica;
 
 public class Cargador_Portatil extends Producto{
     private int cantCargas;
+    static String nomCategoria = Categoria.CARGADORES.name();
 
     public Cargador_Portatil(){
-        super("Cargador portatil", 47.0, 345, Categoria.CARGADORES);
+        super(Categoria.CARGADORES);
     }
 
     public Cargador_Portatil(String nombre, Double precio, int stock, Categoria categoria, int cantCargas) {

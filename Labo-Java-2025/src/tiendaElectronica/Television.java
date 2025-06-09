@@ -2,9 +2,10 @@ package tiendaElectronica;
 
 public class Television extends Producto{
     private Resolucion resolucion;
+    static String nomCategoria = Categoria.MULTIMEDIA.name();
 
     public Television(){
-        super();
+        super(Categoria.MULTIMEDIA);
         resolucion=resolucion.NINGUNA;
     }
 

@@ -15,7 +15,8 @@ public enum Color {
     GREEN("#008000"),
     PURPLE("#800080"),
     TEAL("#008080"),
-    NAVY("#000080");
+    NAVY("#000080"),
+    ORANGE("#FF6600");
 
     private final String hex;
 

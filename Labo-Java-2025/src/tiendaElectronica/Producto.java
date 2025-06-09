@@ -6,11 +6,19 @@ public class Producto{
     private int stock;
     private Categoria categoria;
 
+
     public Producto() {
         this.nombre = "N/A";
         this.precio = 0.0;
         this.stock = 0;
         this.categoria=Categoria.DEFAULT;
+    }
+
+    public Producto(Categoria categoria) {
+        this.nombre = "N/A";
+        this.precio = 0.0;
+        this.stock = 0;
+        this.categoria=categoria;
     }
 
     public Producto(String nombre, Double precio, int stock, Categoria categoria) {
