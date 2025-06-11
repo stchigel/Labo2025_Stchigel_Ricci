@@ -2,7 +2,7 @@ package Drones;
 
 import tiempo.Fecha;
 
-public class Dron {
+public abstract class Dron {
     private String nombre;
     private Fecha fechaAdquisision;
     private Double nivelCarga;
@@ -14,7 +14,7 @@ public class Dron {
         this.fechaAdquisision = new Fecha(0,0,0);
         this.nivelCarga = 100.0;
         this.estado = Estado.INACTIVO;
-        this.mision = Mision.ENTREGA;
+        this.mision = new Mision();
     }
 
     public Dron(String nombre, Fecha fechaAdquisision, Double nivelCarga, Estado estado, Mision mision) {
@@ -69,25 +69,12 @@ public class Dron {
         if(nivelCarga<=20.0){
             setNivelCarga(100.0);
         }
-        else{
+        else if (nivelCarga<100){
             nivelCarga+=10;
         }
     }
 
-    public Double calcularDistancia(){
-        // Convertir a radianes
-        double lat1Rad = Math.toRadians(mision.getLatitudOrigen());
-        double lon1Rad = Math.toRadians(mision.getLongitudOrigen());
-        double lat2Rad = Math.toRadians(mision.getLatitudDestino());
-        double lon2Rad = Math.toRadians(mision.getLongitudDestino());
 
-        // Fórmula de Haversine
-        double dLat = lat2Rad - lat1Rad;
-        double dLon = lon2Rad - lon1Rad;
-        double a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.cos(lat1Rad) * Math.cos(lat2Rad) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        double radioTierraKm = 6371;
-        return radioTierraKm * c;
-    }
+
+    public abstract boolean puedoLlegar();
 }

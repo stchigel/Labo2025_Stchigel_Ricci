@@ -11,7 +11,6 @@ public class Postre extends Receta {
         this.temperatura = 0;
         this.diabetico = false;
     }
-
     public Postre(String nombre, Dificultad dificultad, ArrayList<String> pasos, int temperatura, boolean diabetico) {
         super(nombre, dificultad, pasos);
         this.temperatura = temperatura;
