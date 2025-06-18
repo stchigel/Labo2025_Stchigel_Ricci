@@ -17,12 +17,12 @@ public class Tests {
         directores1.add(new Persona("Robert Zemeckis", 72, "N/A"));
         ArrayList<Persona> actores1 = new ArrayList<>();
         actores1.add(new Persona("Michael J. Fox", 63, "N/A"));
-        ArrayList<String> idiomas1 = new ArrayList<>();
-        idiomas1.add("Español");
-        idiomas1.add("Inglés");
-        idiomas1.add("Alemán");
-        idiomas1.add("Árabe");
-        this.p1 = new Pelicula("Volver al Futuro", "Ciencia Ficción", 116, directores1, actores1, idiomas1);
+        ArrayList<Idioma> idiomas1 = new ArrayList<>();
+        idiomas1.add(Idioma.ESPANOL);
+        idiomas1.add(Idioma.INGLES);
+        idiomas1.add(Idioma.ALEMAN);
+        idiomas1.add(Idioma.ARABE);
+        this.p1 = new Pelicula("Volver al Futuro", Genero.CIENCIA_FICCION, 116, directores1, actores1, idiomas1);
     }
 
     @Test

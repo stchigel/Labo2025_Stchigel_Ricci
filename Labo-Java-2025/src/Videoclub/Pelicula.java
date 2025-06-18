@@ -5,22 +5,22 @@ import java.util.ArrayList;
 
 public class Pelicula {
     private String nombre;
-    private String genero;
+    private Genero genero;
     private int duracion;
     private ArrayList<Persona> directores;
     private ArrayList<Persona> actores;
-    private ArrayList<String> idiomas;
+    private ArrayList<Idioma> idiomas;
 
     public Pelicula() {
         this.nombre = "N/A";
-        this.genero = "N/A";
+        this.genero = Genero.NINGUNO;
         this.duracion = 0;
         this.directores = new ArrayList<>();
         this.actores = new ArrayList<>();
         this.idiomas = new ArrayList<>();
     }
 
-    public Pelicula(String nombre, String genero, int duracion, ArrayList<Persona> directores, ArrayList<Persona> actores, ArrayList<String> idiomas) {
+    public Pelicula(String nombre, Genero genero, int duracion, ArrayList<Persona> directores, ArrayList<Persona> actores, ArrayList<Idioma> idiomas) {
         this.nombre = nombre;
         this.genero = genero;
         this.duracion = duracion;
@@ -37,11 +37,11 @@ public class Pelicula {
         this.nombre = nombre;
     }
 
-    public String getGenero() {
+    public Genero getGenero() {
         return genero;
     }
 
-    public void setGenero(String genero) {
+    public void setGenero(Genero genero) {
         this.genero = genero;
     }
 
@@ -77,21 +77,21 @@ public class Pelicula {
         this.actores.add(actor);
     }
 
-    public ArrayList<String> getIdiomas() {
+    public ArrayList<Idioma> getIdiomas() {
         return idiomas;
     }
 
-    public void setIdiomas(ArrayList<String> idiomas) {
+    public void setIdiomas(ArrayList<Idioma> idiomas) {
         this.idiomas = idiomas;
     }
 
-    public void addIdioma(String idioma) {
+    public void addIdioma(Idioma idioma) {
         this.idiomas.add(idioma);
     }
 
     public void printInfo() {
         System.out.println("Nombre: " + this.nombre);
-        System.out.println("Género: " + this.genero);
+        System.out.println("Género: " + this.genero.toString());
         System.out.println("Duración: " + this.duracion + " minutos");
 
         System.out.print("Directores: ");
@@ -107,8 +107,8 @@ public class Pelicula {
         System.out.println();
 
         System.out.print("Idiomas: ");
-        for (String idioma : this.idiomas) {
-            System.out.print(idioma + " ");
+        for (Idioma idioma : this.idiomas) {
+            System.out.print(idioma.toString() + " ");
         }
         System.out.println();
     }

@@ -1,0 +1,5 @@
+package Videoclub;
+
+public enum Idioma {
+    ESPANOL, INGLES, CHINO, ITALIANO, FRANCES, ALEMAN, JAPONES, TAILANDES, INDIO, RUSO, ARABE
+}

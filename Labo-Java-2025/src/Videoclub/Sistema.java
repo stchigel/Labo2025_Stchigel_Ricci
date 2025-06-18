@@ -110,20 +110,20 @@ public class Sistema {
         directores1.add(new Persona("Robert Zemeckis", 72, "N/A"));
         ArrayList<Persona> actores1 = new ArrayList<>();
         actores1.add(new Persona("Michael J. Fox", 63, "N/A"));
-        ArrayList<String> idiomas1 = new ArrayList<>();
-        idiomas1.add("Español");
-        idiomas1.add("Inglés");
-        idiomas1.add("Alemán");
-        idiomas1.add("Árabe");
-        Pelicula p1 = new Pelicula("Volver al Futuro", "Ciencia Ficción", 116, directores1, actores1, idiomas1);
+        ArrayList<Idioma> idiomas1 = new ArrayList<>();
+        idiomas1.add(Idioma.ESPANOL);
+        idiomas1.add(Idioma.INGLES);
+        idiomas1.add(Idioma.ALEMAN);
+        idiomas1.add(Idioma.ARABE);
+        Pelicula p1 = new Pelicula("Volver al Futuro", Genero.CIENCIA_FICCION, 116, directores1, actores1, idiomas1);
 
 // Volver al Futuro 2
         ArrayList<Persona> directores2 = new ArrayList<>();
         directores2.add(new Persona("Robert Zemeckis", 72, "N/A"));
         ArrayList<Persona> actores2 = new ArrayList<>();
         actores2.add(new Persona("Michael J. Fox", 63, "N/A"));
-        ArrayList<String> idiomas2 = new ArrayList<>(idiomas1);
-        Pelicula p2 = new Pelicula("Volver al Futuro 2", "Ciencia Ficción", 108, directores2, actores2, idiomas2);
+        ArrayList<Idioma> idiomas2 = new ArrayList<>(idiomas1);
+        Pelicula p2 = new Pelicula("Volver al Futuro 2", Genero.CIENCIA_FICCION, 108, directores2, actores2, idiomas2);
 
 
 // Chicken Little
@@ -131,14 +131,14 @@ public class Sistema {
         directores3.add(new Persona("Mark Dindal", 61, "N/A"));
         ArrayList<Persona> actores3 = new ArrayList<>();
         actores3.add(new Persona("Zach Braff", 49, "N/A"));
-        ArrayList<String> idiomas3 = new ArrayList<>(idiomas1);
-        Pelicula p3 = new Pelicula("Chicken Little", "Animación", 81, directores3, actores3, idiomas3);
+        ArrayList<Idioma> idiomas3 = new ArrayList<>(idiomas1);
+        Pelicula p3 = new Pelicula("Chicken Little", Genero.ANIMACION, 81, directores3, actores3, idiomas3);
 
 
 // Volver al Futuro 3
         ArrayList<Persona> actores4 = new ArrayList<>();
         actores4.add(new Persona("Michael J. Fox", 63, "N/A"));
-        Pelicula p4 = new Pelicula("Volver al Futuro 3", "Ciencia Ficción", 118, directores2, actores4, idiomas2);
+        Pelicula p4 = new Pelicula("Volver al Futuro 3", Genero.CIENCIA_FICCION, 118, directores2, actores4, idiomas2);
 
 
 // Rápidos y Furiosos
@@ -146,8 +146,8 @@ public class Sistema {
         directores5.add(new Persona("Rob Cohen", 75, "N/A"));
         ArrayList<Persona> actores5 = new ArrayList<>();
         actores5.add(new Persona("Vin Diesel", 57, "N/A"));
-        ArrayList<String> idiomas5 = new ArrayList<>(idiomas1);
-        Pelicula p5 = new Pelicula("Rápidos y Furiosos", "Acción", 106, directores5, actores5, idiomas5);
+        ArrayList<Idioma> idiomas5 = new ArrayList<>(idiomas1);
+        Pelicula p5 = new Pelicula("Rápidos y Furiosos", Genero.ACCION, 106, directores5, actores5, idiomas5);
 
 
 // Benjamin Button
@@ -155,7 +155,7 @@ public class Sistema {
         directores6.add(new Persona("David Fincher", 62, "N/A"));
         ArrayList<Persona> actores6 = new ArrayList<>();
         actores6.add(new Persona("Brad Pitt", 60, "N/A"));
-        Pelicula p6 = new Pelicula("Benjamin Button", "Drama", 166, directores6, actores6, idiomas1);
+        Pelicula p6 = new Pelicula("Benjamin Button", Genero.DRAMA, 166, directores6, actores6, idiomas1);
 
 
 // Rambo
@@ -163,7 +163,7 @@ public class Sistema {
         directores7.add(new Persona("Ted Kotcheff", 84, "N/A"));
         ArrayList<Persona> actores7 = new ArrayList<>();
         actores7.add(new Persona("Sylvester Stallone", 77, "N/A"));
-        Pelicula p7 = new Pelicula("Rambo", "Acción", 93, directores7, actores7, idiomas1);
+        Pelicula p7 = new Pelicula("Rambo", Genero.ACCION, 93, directores7, actores7, idiomas1);
 
 
 // Terminator
@@ -171,7 +171,7 @@ public class Sistema {
         directores8.add(new Persona("James Cameron", 69, "N/A"));
         ArrayList<Persona> actores8 = new ArrayList<>();
         actores8.add(new Persona("Arnold Schwarzenegger", 76, "N/A"));
-        Pelicula p8 = new Pelicula("Terminator", "Ciencia Ficción", 107, directores8, actores8, idiomas1);
+        Pelicula p8 = new Pelicula("Terminator", Genero.CIENCIA_FICCION, 107, directores8, actores8, idiomas1);
 
 
 // Trolls 3
@@ -179,14 +179,14 @@ public class Sistema {
         directores9.add(new Persona("Walt Dohrn", 54, "N/A"));
         ArrayList<Persona> actores9 = new ArrayList<>();
         actores9.add(new Persona("Anna Kendrick", 38, "N/A"));
-        Pelicula p9 = new Pelicula("Trolls 3", "Animación", 92, directores9, actores9, idiomas1);
+        Pelicula p9 = new Pelicula("Trolls 3", Genero.ANIMACION, 92, directores9, actores9, idiomas1);
 
 // Rush: pasión y gloria
         ArrayList<Persona> directores10 = new ArrayList<>();
         directores10.add(new Persona("Ron Howard", 70, "N/A"));
         ArrayList<Persona> actores10 = new ArrayList<>();
         actores10.add(new Persona("Chris Hemsworth", 40, "N/A"));
-        Pelicula p10 = new Pelicula("Rush: pasión y gloria", "Biografía", 123, directores10, actores10, idiomas1);
+        Pelicula p10 = new Pelicula("Rush: pasión y gloria", Genero.BIOGRAFIA, 123, directores10, actores10, idiomas1);
 
 
 // Culpa mía
@@ -194,11 +194,11 @@ public class Sistema {
         directores11.add(new Persona("Domingo González", 40, "N/A"));
         ArrayList<Persona> actores11 = new ArrayList<>();
         actores11.add(new Persona("Nicole Wallace", 22, "N/A"));
-        Pelicula p11 = new Pelicula("Culpa mía", "Romance", 117, directores11, actores11, idiomas1);
+        Pelicula p11 = new Pelicula("Culpa mía", Genero.ROMANCE, 117, directores11, actores11, idiomas1);
 
 
 // Culpa tuya
-        Pelicula p12 = new Pelicula("Culpa tuya", "Romance", 120, directores11, actores11, idiomas1);
+        Pelicula p12 = new Pelicula("Culpa tuya", Genero.ROMANCE, 120, directores11, actores11, idiomas1);
 
 
 // Una película de Minecraft
@@ -206,7 +206,7 @@ public class Sistema {
         directores13.add(new Persona("Jared Hess", 44, "N/A"));
         ArrayList<Persona> actores13 = new ArrayList<>();
         actores13.add(new Persona("Jason Momoa", 45, "N/A"));
-        Pelicula p13 = new Pelicula("Una película de Minecraft", "Aventura", 100, directores13, actores13, idiomas1);
+        Pelicula p13 = new Pelicula("Una película de Minecraft", Genero.AVENTURA, 100, directores13, actores13, idiomas1);
 
 
 // El Gladiador
@@ -214,32 +214,32 @@ public class Sistema {
         directores14.add(new Persona("Ridley Scott", 86, "N/A"));
         ArrayList<Persona> actores14 = new ArrayList<>();
         actores14.add(new Persona("Russell Crowe", 60, "N/A"));
-        Pelicula p14 = new Pelicula("El Gladiador", "Épico", 155, directores14, actores14, idiomas1);
+        Pelicula p14 = new Pelicula("El Gladiador", Genero.EPICO, 155, directores14, actores14, idiomas1);
 
 // Rocky 1 a 6 (p15 a p20)
-        Pelicula p15 = new Pelicula("Rocky 1", "Deporte", 120, directores7, actores7, idiomas1);
-        Pelicula p16 = new Pelicula("Rocky 2", "Deporte", 119, directores7, actores7, idiomas1);
-        Pelicula p17 = new Pelicula("Rocky 3", "Deporte", 99, directores7, actores7, idiomas1);
-        Pelicula p18 = new Pelicula("Rocky 4", "Deporte", 91, directores7, actores7, idiomas1);
-        Pelicula p19 = new Pelicula("Rocky 5", "Deporte", 104, directores7, actores7, idiomas1);
-        Pelicula p20 = new Pelicula("Rocky 6", "Deporte", 102, directores7, actores7, idiomas1);
+        Pelicula p15 = new Pelicula("Rocky 1", Genero.DEPORTE, 120, directores7, actores7, idiomas1);
+        Pelicula p16 = new Pelicula("Rocky 2", Genero.DEPORTE, 119, directores7, actores7, idiomas1);
+        Pelicula p17 = new Pelicula("Rocky 3", Genero.DEPORTE, 99, directores7, actores7, idiomas1);
+        Pelicula p18 = new Pelicula("Rocky 4", Genero.DEPORTE, 91, directores7, actores7, idiomas1);
+        Pelicula p19 = new Pelicula("Rocky 5", Genero.DEPORTE, 104, directores7, actores7, idiomas1);
+        Pelicula p20 = new Pelicula("Rocky 6", Genero.DEPORTE, 102, directores7, actores7, idiomas1);
 
 // John Wick 1 a 4 (p21 a p24)
         ArrayList<Persona> directores15 = new ArrayList<>();
         directores15.add(new Persona("Chad Stahelski", 55, "N/A"));
         ArrayList<Persona> actores15 = new ArrayList<>();
         actores15.add(new Persona("Keanu Reeves", 59, "N/A"));
-        Pelicula p21 = new Pelicula("John Wick 1", "Acción", 101, directores15, actores15, idiomas1);
-        Pelicula p22 = new Pelicula("John Wick 2", "Acción", 122, directores15, actores15, idiomas1);
-        Pelicula p23 = new Pelicula("John Wick 3", "Acción", 131, directores15, actores15, idiomas1);
-        Pelicula p24 = new Pelicula("John Wick 4", "Acción", 169, directores15, actores15, idiomas1);
+        Pelicula p21 = new Pelicula("John Wick 1", Genero.ACCION, 101, directores15, actores15, idiomas1);
+        Pelicula p22 = new Pelicula("John Wick 2", Genero.ACCION, 122, directores15, actores15, idiomas1);
+        Pelicula p23 = new Pelicula("John Wick 3", Genero.ACCION, 131, directores15, actores15, idiomas1);
+        Pelicula p24 = new Pelicula("John Wick 4", Genero.ACCION, 169, directores15, actores15, idiomas1);
 
         ArrayList<Persona> directoresBarbie = new ArrayList<>();
         directoresBarbie.add(new Persona("Conrad Helten", 50, "N/A"));
         ArrayList<Persona> actoresBarbie = new ArrayList<>();
         actoresBarbie.add(new Persona("Erica Lindbeck", 32, "N/A")); // voz de Barbie
-        ArrayList<String> idiomasBarbie = new ArrayList<>(idiomas1); // Español, Inglés, Alemán, Árabe
-        Pelicula p25 = new Pelicula("Barbie y los delfines mágicos", "Animación", 64, directoresBarbie, actoresBarbie, idiomasBarbie);
+        ArrayList<Idioma> idiomasBarbie = new ArrayList<>(idiomas1); // Español, Inglés, Alemán, Árabe
+        Pelicula p25 = new Pelicula("Barbie y los delfines mágicos", Genero.ANIMACION, 64, directoresBarbie, actoresBarbie, idiomasBarbie);
 
         e1.addPelicula(p5);   // (solo en e1)
         e4.addPelicula(p12);  // (solo en e4)
