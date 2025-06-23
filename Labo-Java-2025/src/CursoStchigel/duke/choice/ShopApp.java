@@ -2,6 +2,7 @@ package CursoStchigel.duke.choice;
 
 public class ShopApp {
     public static void main(String[] args) {
+        System.out.println("Pecio mínimo estandard: " + Clothing.minPrice);
         Customer c1 = new Customer("Pinky", 3);
         /*c1.setName("Pinky");
         c1.setSize("S");*/
@@ -34,7 +35,7 @@ public class ShopApp {
 
         for (Clothing item : items){
             if (item.getSize() == c1.getSize()){
-                System.out.println("Item datos: "+ item.getDescription() +", "+ item.getPrice() +", "+ item.getSize());
+                System.out.println(item.toString());
             }
         }
 
