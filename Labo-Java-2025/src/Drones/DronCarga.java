@@ -19,8 +19,8 @@ public class DronCarga extends Dron{
     public boolean puedoLlegar() {
         if(super.getMision().calcularDistancia()>30){
             return false;
-        } else if (super.getNivelCarga()>=48.0){
-            super.setNivelCarga(super.getNivelCarga()-48.0);
+        } else if (super.getNivelCarga()>=50.0){
+            super.setNivelCarga(super.getNivelCarga()-50.0);
             return true;
         } else {
             return false;

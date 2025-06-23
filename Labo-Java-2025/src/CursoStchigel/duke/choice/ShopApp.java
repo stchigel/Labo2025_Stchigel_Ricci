@@ -35,7 +35,7 @@ public class ShopApp {
 
         for (Clothing item : items){
             if (item.getSize() == c1.getSize()){
-                System.out.println(item.toString());
+                System.out.println(item);
             }
         }
 
