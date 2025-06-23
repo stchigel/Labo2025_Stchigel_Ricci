@@ -23,8 +23,6 @@ public class Sistema {
         System.out.println("2- Saludar a una mascota");
         System.out.println("3- Matar a tu mascota (borrarla)");
 
-        if(1==1+1){
-            int pene=10000;
-        }
+        
     }
 }
