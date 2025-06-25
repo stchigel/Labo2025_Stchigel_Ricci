@@ -32,7 +32,7 @@ public abstract class Mascota {
         this.name = name;
     }
 
-    public abstract void Saludar(Persona saludador);
+    public abstract void Saludar(String saludador);
     public abstract void Alimentar();
     public abstract Tipo quienSoy();
 }

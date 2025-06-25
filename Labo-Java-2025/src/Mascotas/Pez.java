@@ -32,11 +32,12 @@ public class Pez extends Mascota{
     }
 
     @Override
-    public void Saludar(Persona saludador) {
-        if(saludador==super.getDuenio()){
+    public void Saludar(String saludador) {
+        if(saludador==super.getDuenio().getNombre()){
             vida--;
         } else {
             vida=0;
+            System.out.println("A la lobby malo de mierda");
         }
     }
 

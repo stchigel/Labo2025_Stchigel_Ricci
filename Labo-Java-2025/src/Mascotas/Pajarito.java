@@ -12,8 +12,8 @@ public class Pajarito extends Alegre{
     }
 
     @Override
-    public void Saludar(Persona saludador) {
-        if(saludador==super.getDuenio()){
+    public void Saludar(String saludador) {
+        if(saludador==super.getDuenio().getNombre()){
             if(getAlegria()==1){
                 System.out.println("pio");
             } else {
@@ -25,7 +25,7 @@ public class Pajarito extends Alegre{
                 setAlegria(getAlegria()-1);
             }
         } else {
-            System.out.println("*silencio*");
+            System.out.println("*raja de aca la concha de tu hermana*");
         }
     }
 

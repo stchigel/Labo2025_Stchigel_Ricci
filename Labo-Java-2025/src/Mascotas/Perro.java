@@ -12,8 +12,8 @@ public class Perro extends Alegre{
     }
 
     @Override
-    public void Saludar(Persona saludador) {
-        if(saludador==super.getDuenio()){
+    public void Saludar(String saludador) {
+        if(saludador==super.getDuenio().getNombre()){
             if(getAlegria()==1){
                 System.out.println("guau");
             } else {
