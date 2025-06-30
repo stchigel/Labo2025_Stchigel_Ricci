@@ -1,4 +1,4 @@
-package Mascotas;
+package Bastaricci;
 
 import Bases.Persona;
 
