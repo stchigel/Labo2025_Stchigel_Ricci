@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMA House by Yurbban South Beach - PlayaYA!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="icon" type="image/png" href="img/logo.png"/>
+</head>
+
+<body>
+  <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-md position-fixed top-0 start-0 w-100 z-3 bg-black bg-opacity-50">
+          <div class="container-fluid max-100">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo-banner.png" alt="Volarusu" width="auto" height="35px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page"
+                    href="plans.html">Planes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://doslunas.com.ar/wp-content/uploads/playas-doradas-de-las-toninas-al-atardecer.jpg"
+                class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.ytimg.com/vi/IAH6-g71ft8/maxresdefault.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="https://www.portaldelacosta.com.ar/images/ciudades/las-toninas-playa.jpg" class="d-block w-100"
+                alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2 class="fw-bold">UMA House by Yurbban South Beach</h2>
+        <p class="text-muted">Miami Beach, Estados Unidos. A 306 m del centro</p>
+        <div class="d-flex align-items-center mb-3">
+          <span class="badge bg-success me-2 fs-5">9.0</span>
+          <div>
+            <p class="mb-0 fw-semibold">Excelente</p>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25656.49831134077!2d-56.73854861274214!3d-36.50435847188857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c118a2f868425%3A0x16716978405508c8!2sLa%20Omi%20Hotel!5e0!3m2!1ses!2sar!4v1752506846693!5m2!1ses!2sar"
+          width="100%" height="50%" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- FORM DESKTOP -->
+      <div class="col-4 d-none	d-lg-block check-availabilty ">
+        <div class="block-32 aos-init aos-animate" data-aos="fade-up" data-aos-offset="-200">
+          <form action="/futuraaccion" class="form-stack-2">
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="date" id="checkin_date" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="date" id="checkout_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="adults" class="font-weight-bold text-black">Adults</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="adults" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="children" class="font-weight-bold text-black">Children</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="children" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Número de tarjeta</label>
+                <div class="field-icon-wrap">
+                  <input type="tel" id="checkin_date" class="form-control" placeholder="####-####-####-####" maxlength="16" minlength="16">
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">CVV</label>
+                <div class="field-icon-wrap">
+                  <input type="password" id="checkin_date" class="form-control" placeholder="***" maxlength="4" minlength="3">
+                </div>
+              </div>
+
+              <h3>Total: $50000</h3>
+
+              <div class="col-md-6 col-lg-3 align-self-end">
+                <button class="btn btn-primary btn-block text-white">Reservar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM EN CELU -->
+    <div class="row d-block	d-lg-none">
+      <div class="col">
+        <div class="block-32 aos-init aos-animate" data-aos="fade-up" data-aos-offset="-200">
+          <form action="/futuraacion" class="form-stack-2">
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="date" id="checkin_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="date" id="checkout_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="adults" class="font-weight-bold text-black">Adults</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="adults" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="children" class="font-weight-bold text-black">Children</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="children" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Número de tarjeta</label>
+                <div class="field-icon-wrap">
+                  <input type="tel" id="checkin_date" class="form-control" placeholder="####-####-####-####" maxlength="16" minlength="16">
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">CVV</label>
+                <div class="field-icon-wrap">
+                  <input type="password" id="checkin_date" class="form-control" placeholder="***" maxlength="4" minlength="3">
+                </div>
+              </div>
+
+              <h3>Total: $50000</h3>
+
+              <div class="col-md-6 col-lg-3 align-self-end">
+                <button class="btn btn-primary btn-block text-white">Reservar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Servicios -->
+    <div class="row mt-4">
+      <h5 class="fw-bold">El paquete ofrece</h5>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-water me-2"></i> Hotel All-Inclusive 🏨
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-water me-2"></i> Vuelo Business ✈️
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-water me-2"></i> AssistCard Platino 💳
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-wifi me-2"></i> Tarjeta SIM 20GB/Dia 🌐
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-building me-2"></i> Descuentos en bares y restaurantes 🍻
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-cup-hot me-2"></i> Acceso a clubes exclusivos 🪩
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-bicycle me-2"></i> Acceso a playas privadas 🏝️
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-car-front-fill me-2"></i> Valet parking en toda la ciudad 🅿️
+      </div>
+      <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex align-items-center">
+        <i class="bi bi-building-up me-2"></i> Actividades recreativas 🧭
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="container-fluid p-0">
+    <footer class="bg-dark text-white pt-4">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5 class="text-uppercase">Conocenos</h5>
+            <p>
+              Playa YA! nació con el propósito de acercar
+              el mundo de los viajes y las vacaciones soñadas
+              a todas las personas, facilitando la compra de
+              vuelos de manera rápida, sencilla y segura.
+            </p>
+          </div>
+          <div class="col-md-1 mb-3"></div>
+          <div class="col-md-2 mb-3">
+            <h5 class="text-uppercase">Enlaces</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+              <li><a href="plans.html" class="text-white text-decoration-none">Planes</a></li>
+              <li><a href="terminos.html" class="text-white text-decoration-none">Terminos y condiciones</a></li>
+            </ul>
+          </div>
+          <div class="col-md-1 mb-3"></div>
+          <div class="col-md-4 mb-4">
+            <h5 class="text-uppercase">Síguenos</h5>
+            <a href="https://www.facebook.com/" class="text-white me-3 grande"><i class="bi bi-facebook"></i></a>
+            <a href="https://x.com/" class="text-white me-3 grande"><i class="bi bi-twitter"></i></a>
+            <a href="https://instagram.com/" class="text-white me-3 grande"><i class="bi bi-instagram"></i></a>
+            <a href="https://tiktok.com/" class="text-white grande"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3 bg-secondary">
+        © 2025 'PlayaYA!'. Todos los derechos reservados.
+      </div>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const figures = document.querySelectorAll(".gallery figure");
+
+      const totalFigures = figures.length;
+      const maxBig = Math.floor(totalFigures / 8); // 1 de cada 8 será .big como máximo
+      let bigCount = 0;
+
+      figures.forEach((fig) => {
+        if (bigCount < maxBig && Math.random() < 0.3) {
+          fig.classList.add("big");
+          bigCount++;
+        }
+      });
+    });
+  </script>
+
+
+
+
+</body>
+
+</html>

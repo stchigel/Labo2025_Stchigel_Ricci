@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "Gliker";
+  src: url('../fonts/Gliker-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+/* Estilo general del texto */
+.text-black {
+  color: #000 !important;
+}
+.font-weight-bold {
+  font-weight: bold;
+}
+
+/* Formulario */
+.form-control {
+  height: 50px;
+  border-width: 2px;
+  box-shadow: none !important;
+}
+.form-control:focus,
+.form-control:active {
+  border-color: #ffba5a;
+  outline: none;
+}
+
+/* Botón */
+.btn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  outline: none;
+  box-shadow: none !important;
+}
+.btn:focus,
+.btn:active {
+  outline: none;
+}
+.btn-primary {
+  border: none;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.text-white {
+  color: #fff;
+}
+
+/* Íconos dentro de campos */
+.field-icon-wrap {
+  position: relative;
+}
+.field-icon-wrap .form-control {
+  padding-right: 40px;
+  color: #a6a6a6;
+}
+.field-icon-wrap .icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.field-icon-wrap select {
+  appearance: none;
+  width: 100%;
+}
+
+/* Estructura de formulario */
+.block-32 {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 80px -10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Margen superior para posicionar sobre contenido anterior */
+.check-availabilty {
+  margin-top: -150px;
+  position: relative;
+}
+
+/* Layout en columna para inputs */
+.form-stack-2 .row {
+  flex-direction: column;
+}
+
+.form-stack-2 .row > [class*="col-"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+.form-stack-2 .row > [class*="col-"] {
+  margin-bottom: 1rem;
+}
+
+
+/*MI CODIGO*/
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li::before {
+  content: "✅ ";
+  margin-right: 0.5rem;
+}
+
+/*galeria celu principal*/
+
+.contp {
+  background-image: url(../img/fondoResults.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  background-attachment: fixed;
+  /*background-size: cover;*/
+  background-position: center;
+}
+
+
+.carousel-caption {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+
+
+
+/* === Galería de imágenes === */
+
+.main {
+  grid-column: main;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-auto-rows: 1fr;
+  grid-auto-flow: dense;
+  gap: 0rem;
+}
+
+.gallery figure {
+  container: figure / inline-size;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.gallery img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1 / -1 / -1;
+  transition: scale 1s ease-in-out;
+}
+
+.gallery figure:hover img {
+  scale: 1.125;
+}
+
+.gallery figcaption {
+  grid-area: 1 / 1 / -1 / -1;
+  align-self: end;
+  z-index: 1;
+  padding: 3em 15% 1em 1em;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  background: linear-gradient(transparent 25%, rgb(0 0 0 / 0.75));
+  display: block;
+}
+
+.gallery figcaption h3 {
+  font-size: 1.0625rem;
+}
+
+.gallery figcaption p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (width > 400px) {
+  .gallery figure {
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+
+.gallery figure,
+.gallery img {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.momo{
+  margin-top: 50px;
+  text-align: center;
+  color: #0097b2;
+  font-size: 50px;
+  font-family: "Gliker";
+}
+
+.ticket-wrapper{
+  margin: auto;  
+  max-width: 600px;               /* ancho agradable en desktop  */
+  border: 1px solid #dee2e6;      /* sutil borde */
+  border-radius: .5rem;
+  overflow: hidden;               /* redondear parte interior    */
+  background: #f8f9fa url("https://upload.wikimedia.org/wikipedia/commons/4/4e/Mercator_projection_SW.jpg") center/cover;
+}
+
+.ticket-wrapper2 {
+  display: block;
+}
+
+/* encabezado turquesa */
+.ticket-header{
+  background:#0099B7;   /* turquesa */
+  color:#FFD166;        /* amarillo */
+  height:60px;
+}
+
+/* cuerpo */
+.ticket-body{
+  padding:1.25rem 1.5rem;
+}
+
+/* código de barras */
+.barcode{
+  width:90px;
+  height:220px;
+  background:repeating-linear-gradient(
+      to bottom,
+      #000 0 2px,
+      #fff 2px 4px
+  );
+  border:1px solid #000;
+}
+
+/* información */
+.ticket-info{
+  font-size:1rem;
+}
+
+.ticket-info .destino{
+  font-weight:700;
+}
+
+.ticket-wrapper {
+  position: relative;
+  max-width: 600px;
+  margin-inline: auto;
+  border: 1px solid #dee2e6;
+  border-radius: .5rem;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+/* Pseudo-elemento para fondo con transparencia */
+.ticket-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/mapa.png') center/contain no-repeat;
+  opacity: 0.07; /* 7 de 100 */
+  z-index: 0;
+}
+
+/* Encima del fondo */
+.ticket-header,
+.ticket-body {
+  position: relative;
+  z-index: 1;
+}
+
