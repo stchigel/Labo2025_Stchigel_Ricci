@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - PlayaYA!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+    <div class="row">
+      <div class="col">
+        <nav class="navbar navbar-expand-md w-100 z-3 bg-black bg-opacity-50">
+          <div class="container-fluid max-100">
+            <a class="navbar-brand" href="index.html">
+              <img src="img/logo-banner.png" alt="Volarusu" width="auto" height="35px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active text-white" aria-current="page"
+                    href="plans.html">Planes</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="text-center">
+      <h1 class="momo">Gracias por comprar en PlayaYA!</h1>
+      <h3>En breve recibirá sus tickets por mail, disfrute su viaje</h3>
+      <p>Cualquier consulta no dude en contactarnos</p>
+    </div>
+  </div>
+  
+      
+        <div class="container-fluid p-0">
+            <footer  class="bg-dark text-white pt-4">
+              <div class="container text-center text-md-start">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase">Conocenos</h5>
+                    <p>
+                      Playa YA! nació con el propósito de acercar 
+                      el mundo de los viajes y las vacaciones soñadas 
+                      a todas las personas, facilitando la compra de 
+                      vuelos de manera rápida, sencilla y segura. 
+                    </p>
+                  </div>
+                  <div class="col-md-1 mb-3"></div>
+                  <div class="col-md-2 mb-3">
+                    <h5 class="text-uppercase">Enlaces</h5>
+                    <ul class="list-unstyled">
+                      <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+                      <li><a href="plans.html" class="text-white text-decoration-none">Planes</a></li>
+                      <li><a href="terminos.html" class="text-white text-decoration-none">Terminos y condiciones</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-1 mb-3"></div>
+                  <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase">Síguenos</h5>
+                    <a href="https://www.facebook.com/" class="text-white me-3 grande"><i class="bi bi-facebook"></i></a>
+                    <a href="https://x.com/" class="text-white me-3 grande"><i class="bi bi-twitter"></i></a>
+                    <a href="https://instagram.com/" class="text-white me-3 grande"><i class="bi bi-instagram"></i></a>
+                    <a href="https://tiktok.com/" class="text-white grande"><i class="bi bi-tiktok"></i></a>                
+                  </div>    
+                </div>
+              </div>
+              <div class="text-center p-3 bg-secondary">
+                © 2025 'PlayaYA!'. Todos los derechos reservados.
+              </div>
+            </footer>
+          </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const figures = document.querySelectorAll(".gallery figure");
+
+                const totalFigures = figures.length;
+                const maxBig = Math.floor(totalFigures / 8); // 1 de cada 8 será .big como máximo
+                let bigCount = 0;
+
+                figures.forEach((fig) => {
+                    if (bigCount < maxBig && Math.random() < 0.3) {
+                        fig.classList.add("big");
+                        bigCount++;
+                    }
+                });
+            });
+        </script>
+
+
+
+
+</body>
+
+</html>
