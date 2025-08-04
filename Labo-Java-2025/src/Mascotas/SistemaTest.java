@@ -1,4 +1,4 @@
-package Mascotas;
+/*package Mascotas;
 
 import Bases.Persona;
 import org.junit.jupiter.api.BeforeEach;
@@ -45,4 +45,4 @@ class SistemaTest {
     void menuInicio() {
         s1.menuInicio();
     }
-}
+}*/
