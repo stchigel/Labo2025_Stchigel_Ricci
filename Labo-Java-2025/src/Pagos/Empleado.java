@@ -12,7 +12,7 @@ public class Empleado extends Persona{
     private TipoDiseñador TD;
     private HashMap<Proyecto, Double> proyectos;
 
-    public Empleado(String nombre, String apellido, int edad, String direccion, TipoDiseñador TD, HashMap<Proyecto, Double> proyectos) {
+    public Empleado(String nombre, String apellido, int edad, String direccion, TipoDiseñador TD) {
         super(nombre, apellido, edad, direccion);
         this.TD = TD;
         this.proyectos = new HashMap<>();
@@ -40,6 +40,10 @@ public class Empleado extends Persona{
         this.proyectos = proyectos;
     }
 
+    public void addProyecto(Proyecto p, Double s){
+        proyectos.put(p, s);
+    }
+
     //PUNTO 1
     public Double sueldoTotal(){
         Double total=0.0;
@@ -62,18 +66,16 @@ public class Empleado extends Persona{
 
     //PUNTO 4
     public HashMap infoProyecto(){
+        HashMap<Proyecto, HashMap> proyectoInfo = new HashMap<>();
 
-
-        HashMap<Proyecto, ArrayList<Double>> proyectoInfo = new HashMap<>();
         for(Map.Entry<Proyecto, Double> valores : proyectos.entrySet()){
-            ArrayList<Double>pagos = new ArrayList<>();
+            HashMap<Double,Double>pagos=new HashMap<>();
+
             Proyecto p = valores.getKey();
             Double plata = valores.getValue();
             Double comision = plata*(TD.getComision() /100);
 
-            pagos.add(plata);
-            pagos.add(comision);
-
+            pagos.put(plata,comision);
             proyectoInfo.put(p, pagos);
         }
         return proyectoInfo;
