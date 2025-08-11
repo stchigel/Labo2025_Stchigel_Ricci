@@ -24,4 +24,6 @@ public class Publica extends Persona {
     public void setMesasVende(HashSet<Mesa> mesasVende) {
         this.mesasVende = mesasVende;
     }
+
+    //No me habla bonito, tampoco me habla bien, a mi me da lo mismo total no me voy a envolver, yo nunca la ame, nunca la quise ni la voy a querer, solo se lo meto cuando nos vamo a ver, yo nunca mi amor, yo nunca te ame pero chingamos bien rico, chingamos bien rico
 }

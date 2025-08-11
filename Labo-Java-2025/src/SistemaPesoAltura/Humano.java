@@ -2,6 +2,7 @@ package SistemaPesoAltura;
 
 import Bases.Persona;
 import Vacunatorio.Ciudadano;
+import org.w3c.dom.Text;
 
 import java.time.LocalDate;
 import java.time.Year;
@@ -44,18 +45,15 @@ public class Humano extends Persona {
         registros.put(fecha, datos);
     }
 
+    //PUNTO 1
     public String alturaPesoFecha(LocalDate f){
-        String mensaje="";
-        for(Map.Entry<LocalDate, Registro > regis : registros.entrySet()){
-            LocalDate fecha = regis.getKey();
-            Registro regs = regis.getValue();
-            if(fecha.equals(f)){
-                mensaje="Peso: " + regs.getPeso().toString() + " Altura: " + regs.getAltura().toString();
-            }
-        }
+        Double altF = registros.get(f).getAltura();
+        Double pesoF = registros.get(f).getPeso();
+        String mensaje = "Peso: " + pesoF.toString() + " Altura: " + altF.toString();
         return mensaje;
     }
 
+    //PUNTO 2
     public String promAnio(int y){
         String mensaje="";
         int aux=0;
@@ -71,6 +69,16 @@ public class Humano extends Persona {
             }
         }
         mensaje="En "+ y + " el promedio altura fue: " + (auxAltura/=aux).toString() + " y el promedio de peso fue: " +  (auxPeso/=aux).toString();
+        return mensaje;
+    }
+
+    //PUNTO 3
+    public String porcCreci(LocalDate f1, LocalDate f2){
+        Double altF1 = registros.get(f1).getAltura();
+        Double altF2 = registros.get(f2).getAltura();
+        Double porcCrec = ((altF2-altF1)  / altF1) * 100;
+
+        String mensaje = "El porcentaje de crecimiento de la fecha " + f1.toString() + " a " + f2.toString() + " es " + porcCrec.toString();
         return mensaje;
     }
 }
