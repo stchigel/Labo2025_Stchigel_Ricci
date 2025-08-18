@@ -1,4 +1,4 @@
-package Medios;
+/*package Medios;
 
 import tiempo.Fecha;
 import Bases.Persona;
@@ -114,11 +114,11 @@ public class Libro {
     public static void main(String[] args) {
         Persona autor = new Persona("Edgar Alan Poe", 87, "El mcdonalds de walmart");
         Fecha fechaPublicacion = new Fecha(13, 07, 1983);
-        Libro l1 = new Libro("El Libro Troll", autor, 1829289434, 325, /*"MasivoBro Publicaciones"*/ Editorial.KAPELUSZ, fechaPublicacion);
+        Libro l1 = new Libro("El Libro Troll", autor, 1829289434, 325, "MasivoBro Publicaciones" Editorial.KAPELUSZ, fechaPublicacion);
         System.out.println(l1.getTitulo() + " de " + l1.getAutor().getNombre());
 
-        Libro l2 = new Libro("El libro Troll 2", "Dante", 3457, "España", 23452343, 32, Editorial.SUDAMERICANA/*"1xBet"*/, 13, 25, 1984);
+        Libro l2 = new Libro("El libro Troll 2", "Dante", 3457, "España", 23452343, 32, Editorial.SUDAMERICANA"1xBet", 13, 25, 1984);
 
         System.out.println("Fue " + l2.getTitulo() + " publicado después que " + l1.getTitulo() + "? " + l1.menorQue(l2));
     }
-}
+}*/
