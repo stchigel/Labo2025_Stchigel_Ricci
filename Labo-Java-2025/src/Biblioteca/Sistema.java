@@ -1,5 +1,6 @@
 package Biblioteca;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -35,8 +36,15 @@ public class Sistema {
 
     //AMB
     public void agregar(Libro l){
-        libros.put(,l);
+        Integer maxKey = Collections.max(libros.keySet());
+        libros.put(maxKey + 1,l);
     }
 
-    public void bajar(){}
+    public void bajar(Integer i){
+        libros.remove(i);
+    }
+
+    public void modificar(Integer code, Libro l){
+        libros.replace(code, l);
+    }
 }
