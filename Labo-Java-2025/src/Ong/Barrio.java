@@ -1,0 +1,26 @@
+package Ong;
+
+public enum Barrio {
+    MONSERRAT,
+    NUEVA_POMPEYA,
+    NUÑEZ,
+    BELGRANO,
+    CONSTITUCION,
+    COGHLAN,
+    PALERMO,
+    BARRACAS,
+    PARQUE_PATRICIOS,
+    RETIRO,
+    SAAVEDRA,
+    PUERTO_MADERO,
+    SAN_CRISTOBAL,
+    MONTE_CASTRO,
+    VERSALLES,
+    VILLA_SANTA_RITA,
+    COLEGIALES,
+    FLORES,
+    FLORESTA,
+    AGRONOMIA,
+    PARQUE_CHAS;
+}
+

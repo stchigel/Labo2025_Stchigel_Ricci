@@ -7,6 +7,13 @@ import java.util.HashSet;
 public class Sistema {
     private HashMap<Usuario, HashSet<Libro> >clientes;
     private HashMap<Integer,Libro>libros;
+    public static HashMap<Membresia,Integer> descuentos = new HashMap<>();
+    static {
+        descuentos.put(Membresia.BRONCE, 5);
+        descuentos.put(Membresia.PLATA, 15);
+        descuentos.put(Membresia.ORO, 30);
+    }
+
 
     public Sistema() {
         this.clientes = new HashMap<>();
