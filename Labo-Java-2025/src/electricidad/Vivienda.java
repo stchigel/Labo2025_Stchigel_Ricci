@@ -60,5 +60,5 @@ public abstract class Vivienda {
         }
     }
 
-    public abstract Double calcConsumo(Mes mes);
+    /*public */abstract Double calcConsumo(Mes mes);
 }
