@@ -7,9 +7,7 @@ public class Horario {
     private LocalTime horaSalida;
 
     public Horario(LocalTime horaEntrada, LocalTime horaSalida) {
-        if(horaEntrada.isBefore(horaSalida)){
-            this.horaEntrada = horaEntrada;
-        }
+        this.horaEntrada = horaEntrada;
         if(horaSalida.isAfter(horaEntrada)){
             this.horaSalida = horaSalida;
         }
