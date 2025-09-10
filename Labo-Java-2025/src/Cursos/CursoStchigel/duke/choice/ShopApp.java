@@ -1,5 +1,12 @@
 package Cursos.CursoStchigel.duke.choice;
 
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.ServerConfiguration;
+import io.helidon.webserver.WebServer;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 public class ShopApp {
     public static void main(String[] args) {
         System.out.println("Pecio mínimo estandard: " + Clothing.minPrice);
@@ -54,6 +61,8 @@ public class ShopApp {
         System.out.println("Su total es: "+c1.getTotalClothingCost());
 
         c1.setSize(3);
+
+        c1.averagePrice();
         /*int measurement = 3;
         switch (measurement) {
             case 1, 2, 3:
@@ -70,6 +79,24 @@ public class ShopApp {
                 break;
 
         }*/
+
+        try {
+            ItemList list = new
+                ItemList(c1.getItems());
+            Routing routing =
+                    Routing.builder().get("/items", list).build();
+            ServerConfiguration config =
+                    null;
+            config = ServerConfiguration.builder()
+                    .bindAddress (InetAddress.getLocalHost())
+                    .port (8888).build();
+            WebServer ws = WebServer.create(config,
+                    routing);
+            ws.start();
+        } catch (UnknownHostException e) {
+            throw new RuntimeException(e);
+        }
+
 
 
     }

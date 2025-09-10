@@ -9,6 +9,8 @@ public class ShopApp {
         Clothing item3;
         Clothing item4;
 
+        System.out.println("Precio minimo: "+ Clothing.MIN_PRICE);
+
         item1 = new Clothing("Blue Jacket", 20.9, 2);
         item2 = new Clothing("Orange T-Shirt", 10.5, 3);
         item3 = new Clothing("Green Scarf", 5.0, 1);
@@ -22,6 +24,8 @@ public class ShopApp {
         Customer C1 = new Customer("Pinky", 3, itemd);
 
         C1.addItems(itemd);
+
+
 
         for(Clothing c : C1.getItems()){
             if (C1.getSize().equals(c.getSize())) {

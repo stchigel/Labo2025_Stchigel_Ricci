@@ -70,4 +70,21 @@ public class Customer {
         }
         return total;
     }
+
+    public void averagePrice(){
+        int total=0;
+        int count=0;
+        for(Clothing c : this.items){
+            if (c.getSize()=="L"){
+                count++;
+                total+=c.getPrice();
+            }
+        }
+        try {
+            System.out.println(total/count); /*se podria arreglar chequeando que count no sea 0 antes de dividir*/
+        } catch (ArithmeticException e) {
+            System.out.println("No hay prendas de tamaño L, dividiste por 0");
+        }
+
+    }
 }
