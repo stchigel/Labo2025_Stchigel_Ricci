@@ -45,7 +45,7 @@ void inicializar_pilotos_y_equipos(vector<Piloto>& pilotos, vector<equipo>& equi
 
     vector<tuple<string, string, int, string>> datos_pilotos = {
         {"Max", "Verstappen", 1, "Red Bull"},
-        {"Liam", "Lawson", 30, "Red Bull"},
+        {"Liam", "Lawson", 30, "Toro Rosso"},
         {"Lando", "Norris", 4, "McLaren"},
         {"Oscar", "Piastri", 81, "McLaren"},
         {"Lewis", "Hamilton", 44, "Ferrari"},
@@ -57,8 +57,8 @@ void inicializar_pilotos_y_equipos(vector<Piloto>& pilotos, vector<equipo>& equi
         {"Esteban", "Ocon", 31, "Haas"},
         {"Oliver", "Bearman", 87, "Haas"},
         {"Pierre", "Gasly", 10, "Alpine"},
-        {"Jack", "Doohan", 7, "Alpine"},
-        {"Yuki", "Tsunoda", 22, "Toro Rosso"},
+        {"Franco", "Colapinto", 43, "Alpine"},
+        {"Yuki", "Tsunoda", 22, "Red Bull"},
         {"Isack", "Hadjar", 6, "Toro Rosso"},
         {"Nico", "Hülkenberg", 27, "Sauber"},
         {"Gabriel", "Bortoleto", 5, "Sauber"},
