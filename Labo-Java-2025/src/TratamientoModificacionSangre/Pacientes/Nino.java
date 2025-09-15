@@ -3,11 +3,13 @@ package TratamientoModificacionSangre.Pacientes;
 import TratamientoModificacionSangre.Bases.Genero;
 import TratamientoModificacionSangre.Bases.Paciente;
 import TratamientoModificacionSangre.Bases.Sangre;
+import TratamientoModificacionSangre.Tratamiento;
 
 import java.time.LocalDate;
 
-public class Nino extends Paciente {
+public class Nino extends Paciente implements Tratamiento {
     private int nivelTolerancia;
+    private static final Double precioPorTolerancia=450000.00;
 
     int tolMax=10;
     int tolMin=1;
@@ -38,9 +40,20 @@ public class Nino extends Paciente {
         this.nivelTolerancia = nivelTolerancia;
     }
 
-    private void solicitarTratamiento(){
+    @Override
+    public boolean puedeSolicitarTratamiento(){
         if(super.calcularEdad()>3){
             System.out.println("tu tratamiento es de: "+nivelTolerancia*2+" dias");
+            return true;
         }
+        else{
+            System.out.println("Aún es chico para probar el tratamiento");
+            return false;
+        }
+    }
+
+    @Override
+    public Double caclularPrecioTratamiento() {
+        return nivelTolerancia*precioPorTolerancia;
     }
 }
