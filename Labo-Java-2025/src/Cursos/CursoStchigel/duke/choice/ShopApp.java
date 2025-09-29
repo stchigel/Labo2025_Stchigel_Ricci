@@ -1,6 +1,6 @@
-package Cursos.CursoStchigel.duke.choice;
+/*package Cursos.CursoStchigel.duke.choice;
 
-import io.helidon.webserver.Routing;
+/*import io.helidon.webserver.Routing;
 import io.helidon.webserver.ServerConfiguration;
 import io.helidon.webserver.WebServer;
 
@@ -13,7 +13,7 @@ public class ShopApp {
         Customer c1 = new Customer("Pinky", 3);
         /*c1.setName("Pinky");
         c1.setSize("S");*/
-        System.out.println("El nombre del cliente es: " + c1.getName());
+       /* System.out.println("El nombre del cliente es: " + c1.getName());
 
         Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
         Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
@@ -36,7 +36,7 @@ public class ShopApp {
         /*System.out.println("Item uno datos: "+item1.description+", "+item1.price+", "+item1.size);
         System.out.println("Item dos datos: "+item2.description+", "+item2.price+", "+item2.size);*/
 
-        Clothing[] items = {item1, item2, item3, item4};
+       /* Clothing[] items = {item1, item2, item3, item4};
 
         c1.addItems(items);
 
@@ -58,7 +58,7 @@ public class ShopApp {
         /*total+=item1.price+(item1.price*tax);
         total+=(item2.price+(item2.price*tax))*2;*/
 
-        System.out.println("Su total es: "+c1.getTotalClothingCost());
+       /* System.out.println("Su total es: "+c1.getTotalClothingCost());
 
         c1.setSize(3);
 
@@ -79,7 +79,7 @@ public class ShopApp {
                 break;
 
         }*/
-
+/*
         try {
             ItemList list = new
                 ItemList(c1.getItems());
@@ -101,3 +101,4 @@ public class ShopApp {
 
     }
 }
+*/

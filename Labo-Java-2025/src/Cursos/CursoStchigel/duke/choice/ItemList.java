@@ -1,4 +1,4 @@
-package Cursos.CursoStchigel.duke.choice;
+/*package Cursos.CursoStchigel.duke.choice;
 
 import io.helidon.common.http.Http;
 import io.helidon.webserver.Handler;
@@ -21,3 +21,4 @@ public class ItemList implements Handler {
         res.send(Arrays.toString(items));
     }
 }
+*/
