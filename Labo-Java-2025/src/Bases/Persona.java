@@ -1,10 +1,13 @@
 package Bases;
 
+import java.time.LocalDate;
+
 public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
     private String direccion;
+    private LocalDate fn;
 
     public Persona(){
         this.nombre="N/A";
@@ -30,6 +33,12 @@ public class Persona {
         this.apellido=apellido;
         this.edad=edad;
         this.direccion=direccion;
+    }
+
+    public Persona(String nombre, String apellido, LocalDate fn) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fn = fn;
     }
 
     public Persona(String nombre, String apellido){
